@@ -1,0 +1,117 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*HEADER NAV*/
+
+header{ 
+    width: 100%;
+    height: 4rem;
+    border: 0.1rem solid black;
+    border-bottom: 0.3rem solid #980848;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    width: 8rem;
+    max-height: 100%;
+}
+.liens_nav_header{
+    color: #980848;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*NAV IMAGE*/
+
+
+nav{
+    width: 100%;
+    height: 12rem;
+    border-right: 0.1rem solid black;
+    border-left: 0.1rem solid black;
+    display: flex;
+    
+}
+
+.background_nav{
+    background-image: url(https://ibb.co/7VHjTQx);
+    
+}
+.img_header{
+    
+}
+
+.logo_trans{
+    width: 30rem;
+    height: 22rem;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+.champ_recherche{
+    width: 20rem;
+    height: 1.5rem;
+    border: 0.2rem solid #980848;
+    border-radius: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+    resize: none;
+    align-self: center;
+}
+
+/*MAIN*/
+
+
+main{
+    border: 0.1rem solid black;
+    border-top: 0.3rem solid #980848;
+    border-bottom: 0.3rem solid #980848;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bouton_cat_accueil{
+    width: 15rem;
+    height: 15rem;
+}
+
+
+/*FOOTER*/
+
+
+footer{
+    border: 0.1rem solid black;
+    border-top: none;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bann_reseaux{
+    width: 10rem;
+    height: auto;
+    margin-top: -0.5rem;
+}
+
+.img_footer{
+    width: 100%;
+    max-height: 100%;
+    margin-bottom: -5.5rem;
+}
+
+.p_footer{
+    color: white;
+    font-style: italic;
+}
