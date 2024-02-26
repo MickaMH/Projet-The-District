@@ -1,0 +1,43 @@
+#bordures_body{
+    border: 0.1rem solid black;
+}
+
+#couleur_fond{
+    background-color: #fef4e8;
+}
+
+#fond_logo{
+    background-color: #980848;
+}
+
+#bordures{
+    border-color: #980848;
+}
+
+#bordures_header{
+    border-bottom: 0.3rem solid #980848;
+}
+
+#bordures_main{
+    border-top: 0.3rem solid #980848;
+    background-color: #fef4e8;
+}
+
+#bordures_footer{
+    border-top: 0.3rem solid #980848;
+}
+
+#lettres{
+    color: #980848;
+}
+
+#lettres_blanches{
+    color: white;
+}
+
+#bouton{
+    background-color: #980848;
+    color: white;
+}
+
+
