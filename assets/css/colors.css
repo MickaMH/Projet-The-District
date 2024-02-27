@@ -1,3 +1,12 @@
+.parallax{
+    background-image: url("/assets/images/background_resto.webp");
+    /* background-image: url("/assets/images/background_resto_2.jpg"); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #bordures_body{
     border: 0.1rem solid black;
 }
@@ -20,7 +29,7 @@
 
 #bordures_main{
     border-top: 0.3rem solid #980848;
-    background-color: #fef4e8;
+    /* background-color: #fef4e8; */
 }
 
 #bordures_footer{
@@ -39,6 +48,21 @@
     background-color: #980848;
     color: white;
 }
+
+#bouton_arrondi_gauche{
+    background-color: #980848;
+    color: white;
+    border-top-left-radius: 3rem 3rem;
+    border-bottom-left-radius: 3rem 3rem;
+}
+
+#bouton_arrondi_droit{
+    background-color: #980848;
+    color: white;
+    border-top-right-radius: 3rem 3rem;
+    border-bottom-right-radius: 3rem 3rem;
+}
+
 #panneaux{
     background-color: #980848;
     color: white;
