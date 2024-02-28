@@ -39,8 +39,8 @@
                 <a href="plats.html" class="text-decoration-none ms-5" id="lettres">
                     <img src="assets\images\icone_plats_transp.png" class="mb-2" width="3.2%">PLATS</a>
     
-                <a href="contact.html" class="text-decoration-none ms-5" id="lettres_neon">
-                    <img src="assets\images\icone_contact_transp.png" class="mb-2" width="3.5%" id="icones_neon">CONTACT</a>
+                <a href="contact.html" class="text-decoration-none ms-5" id="lettres">
+                    <img src="assets\images\icone_contact_transp.png" class="mb-2" width="3.5%" id="">CONTACT</a>
             
             </div>
 
@@ -92,32 +92,60 @@
 
         <div class="row">
 
-            <div class="col-5 fs-1 fw-medium ms-2 mt-3">
+            <div class="col-5 fs-1 fw-medium ms-5 mt-3">
 
-                <p id="lettres_neon">
-                <img src="assets\images\icone_contact_transp.png" id="icones_neon" class="mb-2 me-2" width="8%">CONTACT</p>
+                <p id="lettres_neon">COMMANDE</p>
             
             </div>
 
         </div>
 
+        <div class="row d-flex justify-content-center m-5">
+
+            <div class="card col-12 d-flex flex-row" style="width: 40rem; height: 17rem">
+
+                <img src="assets/img/plats/image_plat_vierge.png" class=" rounded-3 mt-3 border border-muted" alt="" style="width: 15rem; height: 15rem;">
+
+                <div class="card-body">
+
+                    <h5 class="card-title fs-3">Libellé</h5>
+                    <p class="card-text fst-italic">"Description du plat"</p>
+                    <br><br><br><br><br>
+                    
+                    <div class="d-flex justify-content-center">
+                    <label for="quantite" class="fs-3 ">Quantité :</label><input type="text" name="quantite" class="fs-3 ms-2 text-center" id="quantite" maxlength="3" style="width: 4rem; height: 2.5rem;">
+                    </div>
+
+                </div>
+           
+            </div>
+
+        </div>
+
+        <!-- <div class="row">
+
+            <p id="lettres_blanches">* Ces champs sont obligatoires</p>
+
+        </div> -->
+
         <form class="row m-5 d-flex justify-content-center">
             
-            <div class="col-5 mb-5">
+            <div class="col-5 mb-5 mt-5">
+
                 <p id="lettres_blanches"><sup id="asterisque">*</sup> Ces champs sont obligatoires</p>
                 <input type="text" class="form-control fs-5" placeholder="Nom*" aria-label="First name">
 
             </div>
 
-            <div class="col-5 mb-5">
-                <br><br>
-                <input type="text" class="form-control fs-5" placeholder="Prénom" aria-label="Last name">
+            <div class="col-5 mb-5 mt-5">
+                <p><br></p>
+                <input type="text" class="form-control fs-5" placeholder="Prénom*" aria-label="Last name">
 
             </div>
 
             <div class="col-5 mb-5">
 
-                <input type="email" class="form-control fs-5" placeholder="Email" aria-label="">
+                <input type="email" class="form-control fs-5" placeholder="Email*" aria-label="">
 
             </div>
 
@@ -132,7 +160,7 @@
                 <div class="">
 
                     <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control fs-5" id="" rows="3" placeholder="Votre demande"></textarea>
+                    <textarea class="form-control fs-5" id="" rows="3" placeholder="Votre adresse*"></textarea>
 
                 </div>
 
