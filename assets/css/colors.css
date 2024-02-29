@@ -87,6 +87,12 @@
 #panneaux{
     background-color: #980848;
     color: white;
+    border-top-left-radius: 1rem 1rem;
+    border-top-right-radius: 1rem 1rem;
+}
+
+#champ_formulaire{
+border-color: #980848;
 }
 
 textarea{
@@ -95,6 +101,12 @@ textarea{
 
 sup{
     color: red; font-size: 1.5rem ;
+}
+#lettres_rouges{
+    color: red;
+}
+#quantite{
+    border-color: #980848;
 }
 /* ------------------------------------------------------------------------------------------------------------ */
 

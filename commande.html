@@ -78,7 +78,7 @@
            
             <div class="col-4 offset-4  position-absolute d-flex justify-content-center align-self-center ">
 
-                <input type="text" class="w-100 fs-5 fw-medium rounded-5 form-control border-4" id="bordures" placeholder="&#x1F50E; Rechercher un plat" aria-label="Rechercher">
+                <input type="text" class="w-100 fs-4 fw-medium rounded-5 form-control border-4" id="bordures" placeholder="&#x1F50E; Rechercher un plat" aria-label="Rechercher">
             
             </div>
            
@@ -94,7 +94,8 @@
 
             <div class="col-5 fs-1 fw-medium ms-5 mt-3">
 
-                <p id="lettres_neon">COMMANDE</p>
+                <p id="lettres_neon">
+                    COMMANDE</p>
             
             </div>
 
@@ -113,7 +114,7 @@
                     <br><br><br><br><br>
                     
                     <div class="d-flex justify-content-center">
-                    <label for="quantite" class="fs-3 ">Quantité :</label><input type="text" name="quantite" class="fs-3 ms-2 text-center" id="quantite" maxlength="3" style="width: 4rem; height: 2.5rem;">
+                    <label for="quantite" class="fs-3">Quantité :</label><input type="text" name="quantite" class="fs-3 ms-2 text-center rounded-3 border-3" id="quantite" maxlength="3" style="width: 4rem; height: 2.5rem;">
                     </div>
 
                 </div>
@@ -132,45 +133,50 @@
             
             <div class="col-5 mb-5 mt-5">
 
-                <p id="lettres_blanches"><sup id="asterisque">*</sup> Ces champs sont obligatoires</p>
-                <input type="text" class="form-control fs-5" placeholder="Nom*" aria-label="First name">
+                <input type="text" class="form-control fs-4 border-3" id="champ_formulaire" placeholder="Nom*" aria-label="First name">
 
             </div>
 
             <div class="col-5 mb-5 mt-5">
-                <p><br></p>
-                <input type="text" class="form-control fs-5" placeholder="Prénom*" aria-label="Last name">
+                
+                <input type="text" class="form-control fs-4 border-3" id="champ_formulaire" placeholder="Prénom*" aria-label="Last name">
 
             </div>
 
-            <div class="col-5 mb-5">
+            <div class="col-5 mb-4">
 
-                <input type="email" class="form-control fs-5" placeholder="Email*" aria-label="">
-
-            </div>
-
-            <div class="col-5 mb-5">
-
-                <input type="text" class="form-control fs-5" placeholder="Téléphone*" aria-label="">
+                <input type="email" class="form-control fs-4 border-3" id="champ_formulaire" placeholder="Email*" aria-label="">
 
             </div>
 
-            <div class="col-10">
+            <div class="col-5 mb-4">
 
-                <div class="">
-
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control fs-5" id="" rows="3" placeholder="Votre adresse*"></textarea>
-
-                </div>
+                <input type="text" class="form-control fs-4 border-3" id="champ_formulaire" placeholder="Téléphone*" aria-label="">
 
             </div>
 
-            <div class="col-12 d-flex justify-content-center mt-5">
+            <div class="col-10 mb-3">
 
-                <button type="submit" class="btn d-flex justify-content-center fw-medium shadow-lg fs-5" id="bouton">Envoyer</button>
+                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                <textarea class="form-control fs-4 border-3" id="champ_formulaire" rows="3" placeholder="Votre adresse*"></textarea>
 
             </div>
+
+            <div class="col-10 fs-5 ms-3">
+
+                <p id="lettres_blanches"><sup id="asterisque">*</sup> Ces champs sont obligatoires</p>
+
+            </div>
+
+            <div class="col-12 d-flex justify-content-center">
+
+                <button type="submit" class="btn d-flex justify-content-center fw-medium shadow-lg fs-4" id="bouton">Envoyer</button>
+
+            </div>
+
+            <!-- <div class="col-4">
+
+            </div> -->
 
         </form>
 
