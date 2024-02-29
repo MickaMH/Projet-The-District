@@ -19,6 +19,11 @@
     background-color: #980848;
 }
 
+#bordures_logo{
+border-radius: 2rem 2rem;
+background-color: #980848;
+}
+
 #bordures{
     border-color: #980848;
 }
@@ -64,6 +69,10 @@
 
 /* --------------------------------------------------------------- */
 
+
+#fond_cartes{
+    background-color: #fef4e8;
+}
 
 #bouton{
     background-color: #980848;
