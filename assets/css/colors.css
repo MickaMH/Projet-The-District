@@ -38,7 +38,15 @@ background-color: #980848;
 }
 
 #bordures_footer{
-    border-top: 0.3rem solid #980848;
+    border-top: 0.6rem solid #980848;
+}
+
+#zoom{
+    transition: transform .2s;
+}
+
+#zoom:hover{
+    transform: scale(1.2);
 }
 
 #lettres{
@@ -62,17 +70,17 @@ background-color: #980848;
                     0 0 54px #bb0a59;
 }
 
-#icones_neon{
+/* #icones_neon{
     fill: #980848;
-    filter: drop-shadow(0 0 20px #980848,0 0 50px #1f911b);
-}
+    filter: drop-shadow(0 0 20px #980848);
+} */
 
 /* --------------------------------------------------------------- */
 
 
-#fond_cartes{
+/* #fond_cartes{
     background-color: #fef4e8;
-}
+} */
 
 #bouton{
     background-color: #980848;
@@ -98,6 +106,8 @@ background-color: #980848;
     color: white;
     border-top-left-radius: 1rem 1rem;
     border-top-right-radius: 1rem 1rem;
+    border: 0.4rem solid white;
+    border-bottom: none;
 }
 
 #champ_formulaire{
