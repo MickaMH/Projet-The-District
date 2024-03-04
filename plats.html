@@ -8,6 +8,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/colors.css" type="text/css" media="all">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="responsive.css">
 
     <title>Plats</title>
 </head>
@@ -22,13 +23,13 @@
 
         <div class="row " id="">
 
-            <div class="col-1 ms-2 mb-2 mt-2 p-0 text-center my-auto" id="bordures_logo">
+            <!-- <div class="col-sm-1 col-lg-1 ms-2 mb-2 mt-2 p-0 text-center my-auto" id="bordures_logo">
                 
                 <img src="assets\images\logo_transparent_blanc.png" alt="Logo The District" title="Logo The District" class="img-fluid" width="100%">
             
             </div>
         
-            <div class="col-10 fs-1 fw-medium  ms-5 text-center my-auto">
+            <div class="col-sm-10 col-lg-10 fs-1 fw-medium  ms-5 text-center my-auto">
 
                 <a href="index.html" class="text-decoration-none  ms-5" id="lettres">
                     <img src="assets\images\icone_accueil.png" class="mb-2" width="3.1%">ACCUEIL</a>
@@ -42,7 +43,47 @@
                 <a href="contact.html" class="text-decoration-none ms-5" id="lettres">
                     <img src="assets\images\icone_contact_transp.png" class="mb-2" width="3.5%">CONTACT</a>
             
-            </div>
+            </div> -->
+
+            <nav class="navbar navbar-expand-lg m-2">
+
+                <div class="container-fluid">
+
+                  <button class="navbar-toggler border-3" type="button" id="bordures" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon" id="lettres"></span>
+
+                  </button>
+
+                  <img src="assets\images\logo_transparent_blanc.png" alt="Logo The District" title="Logo The District" width="30%" class="navbar-brand" id="bordures_logo">
+
+                  <div class="collapse navbar-collapse ms-5" id="navbarTogglerDemo03">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-1 fw-medium">
+
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" id="lettres">ACCUEIL</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="categories.html" id="lettres">CATEGORIES</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="plats.html" id="lettres_neon">PLATS</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html" id="lettres">CONTACT</a>
+                        </li>
+
+                    </ul>
+                    
+                  </div>
+
+                </div>
+
+              </nav>
 
         </div>
         
@@ -52,17 +93,17 @@
 
     <nav class="container-fluid" id="bordures_nav">
 
-        <div class="row" id="">
+        <div class="row d-flex justify-content-center" id="">
 
-            <div class="position-relative display-inline-block" id="fond_logo">
+            <div class="col-sm-12 col-lg-12 position-relative display-inline-block" id="fond_logo">
 
                 <img src="" class="img-fluid" alt="" title="">
             
             </div>
            
-            <div class="col-4 offset-4  position-absolute d-flex justify-content-center align-self-center ">
+            <div class="col-sm-10 col-lg-4 position-absolute d-flex align-self-center ">
 
-                <input type="text" class="w-100 fs-4 fw-medium rounded-5 form-control border-4" id="bordures" placeholder="&#x1F50E; Rechercher un plat" aria-label="Rechercher">
+                <input type="text" class="fs-4 fw-medium rounded-5 form-control border-4 d-none d-lg-block" id="bordures" placeholder="&#x1F50E; Rechercher un plat" aria-label="Rechercher">
             
             </div>
            
@@ -76,7 +117,7 @@
 
         <div class="row">
 
-            <div class="col-3 fs-1 fw-medium ms-3 mt-3">
+            <div class="col-sm-10 col-lg-3 fs-1 fw-medium ms-lg-3 mt-lg-3">
 
                 <p id="lettres_neon">
                 <img src="assets\images\icone_plats_transp.png" class="mb-2 me-2" style="width: 3rem; height: auto;" id="icones_neon">PLATS</p>
@@ -87,9 +128,9 @@
 
 
 
-        <div class="row m-5 d-flex justify-content-center">
+        <div class="row m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="carte_verticale">
 
                 <img src="assets\images\pizza-salmon.png" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -107,7 +148,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/images/pizza-margherita.jpg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -127,9 +168,9 @@
 
         </div>
 
-        <div class="row  m-5 d-flex justify-content-center">
+        <div class="row  m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/images/burger_district.png" class=" rounded-3 mt-3 border border-muted" alt="" style="width: 15rem; height: 15rem;">
 
@@ -146,7 +187,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/cheesburger.jpg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -165,9 +206,9 @@
 
         </div>
 
-        <div class="row m-5 d-flex justify-content-center">
+        <div class="row m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/chicken_wrap.jpeg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -185,7 +226,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/spaghetti-legumes.jpg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -205,9 +246,9 @@
 
         </div>
 
-        <div class="row m-5 d-flex justify-content-center">
+        <div class="row m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/lasagnes_viande.jpg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -225,7 +266,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/tagliatelles_saumon.jpg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -245,9 +286,9 @@
 
         </div>
 
-        <div class="row m-5 d-flex justify-content-center">
+        <div class="row m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/salade_cesar_2.jpeg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -264,7 +305,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/plats/courgettes.jpeg" class=" rounded-3 mt-3 " alt="" style="width: 15rem; height: 15rem;">
 
@@ -284,9 +325,9 @@
 
         </div>
 
-        <div class="row m-5 d-flex justify-content-center">
+        <div class="row m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/boissons/orangenial.png" class=" rounded-3 mt-3 border border-muted" alt="" style="width: 15rem; height: 15rem;">
 
@@ -305,7 +346,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5 mb-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/boissons/cola_cola.png" class=" rounded-3 mt-3 border border-muted" alt="" style="width: 15rem; height: 15rem;">
 
@@ -324,9 +365,9 @@
 
         </div>
 
-        <div class="row m-5 d-flex justify-content-center">
+        <div class="row m-lg-5 d-flex justify-content-center">
 
-            <div class="card col-4 d-flex flex-row me-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row me-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/boissons/eau.png" class=" rounded-3 mt-3 border border-muted" alt="" style="width: 15rem; height: 15rem;">
 
@@ -343,7 +384,7 @@
                
             </div>
 
-            <div class="card col-4 d-flex flex-row ms-5" style="width: 40rem; height: 17rem" id="fond_cartes">
+            <div class="card col-sm-10 col-lg-4 d-flex flex-row ms-5" style="width: 40rem; height: 17rem" id="fond_cartes">
 
                 <img src="assets/img/boissons/gazeuse.png" class=" rounded-3 mt-3 border border-muted" alt="" style="width: 15rem; height: 15rem;">
 
@@ -370,7 +411,7 @@
 
         <div class="row text-center" id="">
 
-            <div class="fs-3 fst-italic fw-medium">
+            <div class="col-sm-12 col-lg-12 fs-3 fst-italic fw-medium">
                 
                 <p id="lettres">Retrouvez nous sur vos réseaux sociaux préférés</p>
             
@@ -380,7 +421,7 @@
 
         <div class="row" id="">
 
-            <div class="col-2 offset-5 text-center d-flex align-items-center">
+            <div class="col-sm-12 col-lg-2 offset-5 text-center d-flex align-items-center">
 
                 <a href="https://www.facebook.com/facebook/" class="text-decoration-none">
                     <img src="assets\images\logo_facebook.png" alt="" title="" width="81%" height="auto" class="mb-2 me-1 shadow-lg">

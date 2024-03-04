@@ -42,7 +42,7 @@ background-color: #980848;
 }
 
 #zoom{
-    transition: transform .2s;
+    transition: transform .4s;
 }
 
 #zoom:hover{
@@ -127,6 +127,7 @@ sup{
 #quantite{
     border-color: #980848;
 }
+
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /* #color{
