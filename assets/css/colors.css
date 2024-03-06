@@ -12,7 +12,7 @@
 }
 
 #couleur_fond{
-    background-color: #fef4e8;
+    background-color: gold;
 }
 
 #fond_logo{
@@ -20,8 +20,8 @@
 }
 
 #bordures_logo{
-border-radius: 2rem 2rem;
-background-color: #980848;
+    border-radius: 2rem 2rem;
+    background-color: #980848;
 }
 
 #bordures{
@@ -106,12 +106,12 @@ background-color: #980848;
     color: white;
     border-top-left-radius: 1rem 1rem;
     border-top-right-radius: 1rem 1rem;
-    border: 0.4rem solid white;
+    border: 0.2rem solid white;
     border-bottom: none;
 }
 
 #champ_formulaire{
-border-color: #980848;
+    border-color: #980848;
 }
 
 textarea{
