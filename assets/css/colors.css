@@ -11,7 +11,7 @@
     border: 0.1rem solid black;
 }
 
-#couleur_fond{
+.couleur_fond{
     background-color: gold;
 }
 
@@ -49,7 +49,7 @@
     transform: scale(1.5);
 }
 
-#lettres{
+.lettres{
     color: #980848;
 }
 
@@ -82,7 +82,12 @@
     background-color: #fef4e8;
 } */
 
-#bouton{
+.bouton{
+    background-color: #980848;
+    color: white;
+}
+
+.bouton:hover{ 
     background-color: #980848;
     color: white;
 }
@@ -110,7 +115,7 @@
     border-bottom: none;
 }
 
-#champ_formulaire{
+.champ_formulaire{
     border-color: #980848;
 }
 
