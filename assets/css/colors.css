@@ -94,6 +94,7 @@
     color: white;
     border: none;
     text-decoration: none;
+    border-radius: 0.5rem 0.5rem;
 }
 
 .bouton_precedent{
