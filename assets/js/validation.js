@@ -11,7 +11,7 @@ let mailVerif = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"
 /*let mailVerif = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;*/       /*Voir avec le formateur pour Regex d'Email*/
 
 let phone = document.getElementById("phone");             
-let phoneVerif = /^(?:(?:\\+|00)33|0)\\s*1-9{4}$/;
+let phoneVerif = /^[0-9]{10}$/;
                                                                                     
 let adresse = document.getElementById("adresse");                 
 let adresseVerif =  /^(\d+\s*(?:bis|ter)?\s+[a-zA-Z,\. ]+)\s+(\d{5})\s+([a-zA-Z]+)$/;                            
@@ -41,19 +41,23 @@ let requisAdresse = document.getElementById("requisAdresse");
                 if (nom.validity.valueMissing)                              /*Si "valeur" du champ "nom" est vide*/
                 {
                     event.preventDefault();                                 /*Bloque l'envoi du Formulaire*/
-                    requisNom.textContent = "\u26a0 Champ obligatoire";     /*Affiche message d'erreur*/
+                    requisNom.textContent = "\u26a0 Ce champ est obligatoire";     /*Affiche message d'erreur*/
                     requisNom.style.fontSize = "1.3rem";                      /*Taille de police du message d'erreur*/
                     requisNom.style.fontWeight = "bold";
-                    requisNom.style.color = "red";                              /*Couleur de police du message d'erreur*/            
+                    requisNom.style.color = "red";                              /*Couleur de police du message d'erreur*/ 
+                    requisNom.style.fontFamily = "helvetica";  
+                    nom.style.borderColor = "red";         
                 }
 
                 else if (nomVerif.test(nom.value) == false)                 /*Sinon si "valeur" du champ "nom" différent du Format prévu (nomVerif)*/
                 {                
-                    event.preventDefault();                                 /*Bloque l'envoi du Formulaire*/
-                    requisNom.textContent = "\u26a0 Vérifiez l'orthographe";/*Affiche message d'erreur*/
-                    requisNom.style.fontSize = "1.3rem";                      /*Taille de police du message d'erreur*/
+                    event.preventDefault();                                                 /*Bloque l'envoi du Formulaire*/
+                    requisNom.textContent = "\u26a0 Vérifiez l'orthographe du nom";   /*Affiche message d'erreur*/
+                    requisNom.style.fontSize = "1.3rem";                                    /*Taille de police du message d'erreur*/
                     requisNom.style.fontWeight = "bold";
-                    requisNom.style.color = "orange";                           /*Couleur de police du message d'erreur*/           
+                    requisNom.style.color = "orange";                                       /*Couleur de police du message d'erreur*/           
+                    requisNom.style.fontFamily = "helvetica";
+                    nom.style.borderColor = "orange";
                     nom.placeholder= "sans accents";
                 }
 
@@ -62,6 +66,9 @@ let requisAdresse = document.getElementById("requisAdresse");
                     requisNom.textContent = "\u2713";                       /*Affiche une Coche*/ 
                     requisNom.style.fontSize = "1.3rem";                      /*Taille de police de la Coche*/
                     requisNom.style.color = "green";                        /*Couleur de la Coche*/
+                    requisNom.style.fontFamily = "helvetica";
+                    requisNom.style.fontWeight = "bold";
+                    nom.style.borderColor = "#980848";
                 }
 
                 
@@ -71,19 +78,23 @@ let requisAdresse = document.getElementById("requisAdresse");
                 if (prenom.validity.valueMissing)               /*Fonctionne comme "NOM" mais ne permet que 20 caractères ( let prenomVerif )*/
                 {
                     event.preventDefault();
-                    requisPrenom.textContent = "\u26a0 Champ obligatoire";      /*Champ vide : Message d'erreur Rouge*/
+                    requisPrenom.textContent = "\u26a0 Ce champ est obligatoire";      /*Champ vide : Message d'erreur Rouge*/
                     requisPrenom.style.fontSize = "1.3rem";
                     requisPrenom.style.fontWeight = "bold";
                     requisPrenom.style.color = "red";
+                    requisPrenom.style.fontFamily = "helvetica";
+                    prenom.style.borderColor = "red";
                 }
 
                 else if (prenomVerif.test(prenom.value) == false)                       
                 {
                     event.preventDefault();
-                    requisPrenom.textContent = "\u26a0 Vérifiez l'orthographe"; /*Format incorrect : Message d'erreur Orange*/
+                    requisPrenom.textContent = "\u26a0 Vérifiez l'orthographe du prénom"; /*Format incorrect : Message d'erreur Orange*/
                     requisPrenom.style.fontSize = "1.3rem";
                     requisPrenom.style.fontWeight = "bold";
                     requisPrenom.style.color = "orange";
+                    requisPrenom.style.fontFamily = "helvetica";
+                    prenom.style.borderColor = "orange";
                     prenom.placeholder= "sans accents";
                 }
 
@@ -92,6 +103,9 @@ let requisAdresse = document.getElementById("requisAdresse");
                     requisPrenom.textContent = "\u2713";                        /*Format Valide : Coche Verte*/
                     requisPrenom.style.fontSize = "1.3rem";
                     requisPrenom.style.color = "green";
+                    requisPrenom.style.fontFamily = "helvetica";
+                    requisPrenom.style.fontWeight = "bold";
+                    prenom.style.borderColor = "#980848";
                 }
 
                 
@@ -101,19 +115,23 @@ let requisAdresse = document.getElementById("requisAdresse");
                 if (mail.validity.valueMissing)                  /*Fonctionne comme "NOM" avec Regex ( let ddnVerif )*/
                 {
                     event.preventDefault();
-                    requisMail.textContent = "\u26a0 Champ obligatoire";
+                    requisMail.textContent = "\u26a0 Ce champ est obligatoire";
                     requisMail.style.fontSize = "1.3rem";
                     requisMail.style.fontWeight = "bold";
                     requisMail.style.color = "red";
+                    requisMail.style.fontFamily = "helvetica";
+                    mail.style.borderColor = "red";
                 }
 
                 else if (mailVerif.test(mail.value) == false)                                  
                 {
                     event.preventDefault();                                                 
-                    requisMail.textContent = "\u26a0 Format incorrect";
+                    requisMail.textContent = "\u26a0 Cette adresse mail n'est pas valide";
                     requisMail.style.fontSize = "1.3rem";
                     requisMail.style.fontWeight = "bold";
                     requisMail.style.color = "orange";
+                    requisMail.style.fontFamily = "helvetica";
+                    mail.style.borderColor = "orange";
                     mail.placeholder= "ex: dave.loper@afpa.fr";
                 }                               
 
@@ -122,6 +140,9 @@ let requisAdresse = document.getElementById("requisAdresse");
                     requisMail.textContent = "\u2713";
                     requisMail.style.fontSize = "1.3rem";
                     requisMail.style.color = "green";
+                    requisMail.style.fontFamily = "helvetica";
+                    requisMail.style.fontWeight = "bold";
+                    mail.style.borderColor = "#980848";
                 }
 
                 
@@ -131,19 +152,23 @@ let requisAdresse = document.getElementById("requisAdresse");
                 if (phone.validity.valueMissing)                   /*Fonctionne comme "NOM" avec Regex ( let cpVerif )*/
                 {
                     event.preventDefault();
-                    requisPhone.textContent = "\u26a0 Champ obligatoire";
+                    requisPhone.textContent = "\u26a0 Ce champ est obligatoire";
                     requisPhone.style.fontSize = "1.3rem";
                     requisPhone.style.fontWeight = "bold";
                     requisPhone.style.color = "red";
+                    requisPhone.style.fontFamily = "helvetica";
+                    phone.style.borderColor = "red";
                 }
 
                 else if (phoneVerif.test(phone.value) == false)                                      
                 {
                     event.preventDefault();
-                    requisPhone.textContent = "\u26a0 Format incorrect";
+                    requisPhone.textContent = "\u26a0 Ce numéro n'est pas correct";
                     requisPhone.style.fontSize = "1.3rem";
                     requisPhone.style.color = "orange";
                     requisPhone.style.fontWeight = "bold";
+                    requisPhone.style.fontFamily = "helvetica";
+                    phone.style.borderColor = "orange";
                     phone.placeholder= "ex: 0123456789";
                 }
 
@@ -152,6 +177,9 @@ let requisAdresse = document.getElementById("requisAdresse");
                     requisPhone.textContent = "\u2713";
                     requisPhone.style.fontSize = "1.3rem";
                     requisPhone.style.color = "green";
+                    requisPhone.style.fontFamily = "helvetica";
+                    requisPhone.style.fontWeight = "bold";
+                    phone.style.borderColor = "#980848";
                 }
 
                 
@@ -161,19 +189,23 @@ let requisAdresse = document.getElementById("requisAdresse");
                 if (adresse.validity.valueMissing)                 /*Fonctionne comme "NOM" avec Regex ( let mailVerif )*/
                 {
                     event.preventDefault();
-                    requisAdresse.textContent = "\u26a0 Champ obligatoire";
+                    requisAdresse.textContent = "\u26a0 Ce champ est obligatoire";
                     requisAdresse.style.fontSize = "1.3rem";
                     requisAdresse.style.color = "red";
                     requisAdresse.style.fontWeight = "bold";
+                    requisAdresse.style.fontFamily = "helvetica";
+                    adresse.style.borderColor = "red";
                 }
 
                 else if (adresseVerif.test(adresse.value) == false)                                  
                 {
                     event.preventDefault();
-                    requisAdresse.textContent = "\u26a0 Format incorrect";
+                    requisAdresse.textContent = "\u26a0 Cette adresse n'est pas correcte";
                     requisAdresse.style.fontSize = "1.3rem";
                     requisAdresse.style.color = "orange";
                     requisAdresse.style.fontWeight = "bold";
+                    requisAdresse.style.fontFamily = "helvetica";
+                    adresse.style.borderColor = "orange";
                     adresse.placeholder= "ex : 1 rue du boulevard 75000 Paris";
                 }
 
@@ -182,6 +214,9 @@ let requisAdresse = document.getElementById("requisAdresse");
                     requisAdresse.textContent = "\u2713";
                     requisAdresse.style.fontSize = "1.3rem";
                     requisAdresse.style.color = "green";
+                    requisAdresse.style.fontFamily = "helvetica";
+                    requisAdresse.style.fontWeight = "bold";
+                    adresse.style.borderColor = "#980848";
                 }
 
 }                                                               
