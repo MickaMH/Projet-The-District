@@ -42,7 +42,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();                                 /*Bloque l'envoi du Formulaire*/
                     requisNom.textContent = "\u26a0 Ce champ est obligatoire";     /*Affiche message d'erreur*/
-                    requisNom.style.fontSize = "1.3rem";                      /*Taille de police du message d'erreur*/
+                    requisNom.style.fontSize = "1.2rem";                      /*Taille de police du message d'erreur*/
                     requisNom.style.fontWeight = "bold";
                     requisNom.style.color = "red";                              /*Couleur de police du message d'erreur*/ 
                     requisNom.style.fontFamily = "helvetica";  
@@ -53,7 +53,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {                
                     event.preventDefault();                                                 /*Bloque l'envoi du Formulaire*/
                     requisNom.textContent = "\u26a0 Vérifiez l'orthographe du nom";   /*Affiche message d'erreur*/
-                    requisNom.style.fontSize = "1.3rem";                                    /*Taille de police du message d'erreur*/
+                    requisNom.style.fontSize = "1.2rem";                                    /*Taille de police du message d'erreur*/
                     requisNom.style.fontWeight = "bold";
                     requisNom.style.color = "orange";                                       /*Couleur de police du message d'erreur*/           
                     requisNom.style.fontFamily = "helvetica";
@@ -64,7 +64,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 else                                                        /*Sinon "NOM" valide*/
                 {
                     requisNom.textContent = "\u2713";                       /*Affiche une Coche*/ 
-                    requisNom.style.fontSize = "1.3rem";                      /*Taille de police de la Coche*/
+                    requisNom.style.fontSize = "1.2rem";                      /*Taille de police de la Coche*/
                     requisNom.style.color = "green";                        /*Couleur de la Coche*/
                     requisNom.style.fontFamily = "helvetica";
                     requisNom.style.fontWeight = "bold";
@@ -79,7 +79,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisPrenom.textContent = "\u26a0 Ce champ est obligatoire";      /*Champ vide : Message d'erreur Rouge*/
-                    requisPrenom.style.fontSize = "1.3rem";
+                    requisPrenom.style.fontSize = "1.2rem";
                     requisPrenom.style.fontWeight = "bold";
                     requisPrenom.style.color = "red";
                     requisPrenom.style.fontFamily = "helvetica";
@@ -90,7 +90,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisPrenom.textContent = "\u26a0 Vérifiez l'orthographe du prénom"; /*Format incorrect : Message d'erreur Orange*/
-                    requisPrenom.style.fontSize = "1.3rem";
+                    requisPrenom.style.fontSize = "1.2rem";
                     requisPrenom.style.fontWeight = "bold";
                     requisPrenom.style.color = "orange";
                     requisPrenom.style.fontFamily = "helvetica";
@@ -101,7 +101,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 else
                 {
                     requisPrenom.textContent = "\u2713";                        /*Format Valide : Coche Verte*/
-                    requisPrenom.style.fontSize = "1.3rem";
+                    requisPrenom.style.fontSize = "1.2rem";
                     requisPrenom.style.color = "green";
                     requisPrenom.style.fontFamily = "helvetica";
                     requisPrenom.style.fontWeight = "bold";
@@ -116,7 +116,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisMail.textContent = "\u26a0 Ce champ est obligatoire";
-                    requisMail.style.fontSize = "1.3rem";
+                    requisMail.style.fontSize = "1.2rem";
                     requisMail.style.fontWeight = "bold";
                     requisMail.style.color = "red";
                     requisMail.style.fontFamily = "helvetica";
@@ -127,7 +127,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();                                                 
                     requisMail.textContent = "\u26a0 Cette adresse mail n'est pas valide";
-                    requisMail.style.fontSize = "1.3rem";
+                    requisMail.style.fontSize = "1.2rem";
                     requisMail.style.fontWeight = "bold";
                     requisMail.style.color = "orange";
                     requisMail.style.fontFamily = "helvetica";
@@ -138,7 +138,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 else
                 {
                     requisMail.textContent = "\u2713";
-                    requisMail.style.fontSize = "1.3rem";
+                    requisMail.style.fontSize = "1.2rem";
                     requisMail.style.color = "green";
                     requisMail.style.fontFamily = "helvetica";
                     requisMail.style.fontWeight = "bold";
@@ -153,7 +153,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisPhone.textContent = "\u26a0 Ce champ est obligatoire";
-                    requisPhone.style.fontSize = "1.3rem";
+                    requisPhone.style.fontSize = "1.2rem";
                     requisPhone.style.fontWeight = "bold";
                     requisPhone.style.color = "red";
                     requisPhone.style.fontFamily = "helvetica";
@@ -164,7 +164,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisPhone.textContent = "\u26a0 Ce numéro n'est pas correct";
-                    requisPhone.style.fontSize = "1.3rem";
+                    requisPhone.style.fontSize = "1.2rem";
                     requisPhone.style.color = "orange";
                     requisPhone.style.fontWeight = "bold";
                     requisPhone.style.fontFamily = "helvetica";
@@ -175,7 +175,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 else
                 {
                     requisPhone.textContent = "\u2713";
-                    requisPhone.style.fontSize = "1.3rem";
+                    requisPhone.style.fontSize = "1.2rem";
                     requisPhone.style.color = "green";
                     requisPhone.style.fontFamily = "helvetica";
                     requisPhone.style.fontWeight = "bold";
@@ -190,7 +190,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisAdresse.textContent = "\u26a0 Ce champ est obligatoire";
-                    requisAdresse.style.fontSize = "1.3rem";
+                    requisAdresse.style.fontSize = "1.2rem";
                     requisAdresse.style.color = "red";
                     requisAdresse.style.fontWeight = "bold";
                     requisAdresse.style.fontFamily = "helvetica";
@@ -201,7 +201,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 {
                     event.preventDefault();
                     requisAdresse.textContent = "\u26a0 Cette adresse n'est pas correcte";
-                    requisAdresse.style.fontSize = "1.3rem";
+                    requisAdresse.style.fontSize = "1.2rem";
                     requisAdresse.style.color = "orange";
                     requisAdresse.style.fontWeight = "bold";
                     requisAdresse.style.fontFamily = "helvetica";
@@ -212,7 +212,7 @@ let requisAdresse = document.getElementById("requisAdresse");
                 else
                 {
                     requisAdresse.textContent = "\u2713";
-                    requisAdresse.style.fontSize = "1.3rem";
+                    requisAdresse.style.fontSize = "1.2rem";
                     requisAdresse.style.color = "green";
                     requisAdresse.style.fontFamily = "helvetica";
                     requisAdresse.style.fontWeight = "bold";
