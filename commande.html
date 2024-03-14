@@ -130,7 +130,7 @@
 
         <div class="row d-flex justify-content-center">
 
-            <div class="col-lg-3 mt-3 mt-lg-5 me-lg-5 mb-4 mb-lg-5">
+            <div class="col-lg-3 mt-3 mt-lg-5 me-lg-5 mb-4 mb-lg-5 d-block d-sm-none" name="verticale">
 
                 <div class="card border-3 bordures rounded-5" style="height: auto;">
 
@@ -162,14 +162,69 @@
         
                         </div>
 
-                        <label class="fs-4 mt-5 mt-lg-5">Quantité :</label>
-                        <input type="text" name="quantite" class="fs-4 ms-2 text-center rounded-3 bordures" maxlength="3" style="width: 4rem; height: 2.5rem;">
+                        <div class="text-center">
+
+                            <label class="fs-4 mt-5 mt-lg-5">Quantité :</label>
+                            <input type="text" name="quantite" class="fs-4 ms-2 text-center rounded-3 border-3 bordures" value="1" style="width: 4rem; height: 2.5rem;" readonly>
                         
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
+
+            <div class="col-lg-5 mt-3 mt-lg-5 mb-4 mb-lg-5 d-none d-lg-block" name="horizontale">
+
+                <div class="card border-3 bordures rounded-5 flex-row" style="width: 50rem; height: auto;">
+
+                    <img src="assets/img/plats/image_plat_vierge.png" class="card-img-top p-3 rounded-5" style="width: 25rem; height: auto;" alt="">
+
+                    <div class="card-body p-3">
+
+                        <h5 class="card-title fs-1 mb-2">Libellé Plat</h5>
+                        <p class="card-text fst-italic fw-medium fs-5 mb-5">"Description du plat"</p>
+
+                        <div class="text-center">
+
+                            <label class="fs-2 mt-5 mt-lg-5">Quantité :</label>
+                            <input type="text" name="quantite" class="fs-2 ms-2 text-center rounded-3 border-3 bordures" value="1" style="width: 4rem; height: 3rem;" readonly>
+                        
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- <div class="col-lg-5 mt-3 mt-lg-5 mb-4 mb-lg-5">
+
+                <div class="card border-3 bordures rounded-5 flex-row" style="width: 50rem; height: auto;">
+
+                    <img src="assets/img/plats/lasagnes_viande.jpg" class="card-img-top p-3 rounded-5" style="width: 25rem; height: auto;" alt="">
+
+                    <div class="card-body p-3">
+
+                        <h5 class="card-title fs-1 mb-2">PASTA Lasagnes</h5>
+
+                        <p class="card-text fst-italic fw-medium fs-5 mb-5">"Découvrez notre recette des lasagnes, l'une des spécialités italiennes que tout le
+                            monde aime avec sa viande hachée et gratinée à l'emmental. Et bien sûr, une
+                            inoubliable béchamel à la noix de muscade."</p>
+
+                        <div class="text-center">
+
+                            <label class="fs-2 mt-5 mt-lg-5">Quantité :</label>
+                            <input type="text" name="quantite" class="fs-2 ms-2 text-center rounded-3 border-3 bordures" value="1" maxlength="1" style="width: 4rem; height: 3rem;" readonly>
+                        
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div> -->
 
         </div>
 
