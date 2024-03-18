@@ -1,197 +1,103 @@
-
-$(document).ready(function()
-{
+$(document).ready(function() {
 
 
-/* $.get("https://metis.afpa.fr/pluginfile.php/18618870/mod_resource/content/1/the_district.json", null, function(data) {
-
-    $("#div1").html(data);
-
+/* $.getJSON("assets/js/the_district.json", function(data) {
+  console.log(data);
 }); */
 
-/* $.getJSON("https://metis.afpa.fr/pluginfile.php/18618870/mod_resource/content/1/the_district.json", function(data) {
 
-    console.log(data);
-
-});
-
+/* $.getJSON("assets/js/the_district.json", function(data) {
+  $("#div1").text(JSON.stringify(data));
+}); */
 
 
 
+/* 
+$("#id_categorie").html(categorie[0].id_categorie);
+
+$("#libelle_categorie").html(categorie[0].libelle);
+
+$("#image_categorie").html(categorie[0].image);
+
+$("#active_categorie").html(categorie[0].active);
 
 
 
+$("#id_plat").html(plat[0].id_plat);
 
+$("#libelle_plat").html(plat[0].libelle);
 
-});
- */
+$("#description_plat").html(plat[0].description);
 
+$("#prix_plat").html(plat[0].prix);
 
+$("#image_plat").html(plat[0].image);
 
-/* $.getJSON("test.json", function(data) {
+$("#id_categorie_plat").html(plat[0].id_categorie);
 
-    console.log(data);
-
-});*/
-
-
-/* $("#div1").load("https://metis.afpa.fr/pluginfile.php/18618870/mod_resource/content/1/the_district.json"); */
+$("#active_plat").html(plat[0].active); */
 
 
 
-let categories = 
-[
-    {
-     "id_categorie": 4,
-     "libelle": "Pizza",
-     "image": "pizza_cat.jpg",
-     "active": "Yes"
-    },
-    {
-     "id_categorie": 5,
-     "libelle": "Burger",
-     "image": "burger_cat.jpg",
-     "active": "Yes"
-    },
-    {
-     "id_categorie": 9,
-     "libelle": "Wraps",
-     "image": "wrap_cat.jpg",
-     "active": "Yes"
-    },
-    {
-     "id_categorie": 10,
-     "libelle": "Pasta",
-     "image": "pasta_cat.jpg",
-     "active": "Yes"
-    },
-    {
-     "id_categorie": 11,
-     "libelle": "Sandwich",
-     "image": "sandwich_cat.jpg",
-     "active": "Yes"
-    },
-    {
-     "id_categorie": 12,
-     "libelle": "Asian Food",
-     "image": "asian_food_cat.jpg",
-     "active": "No"
-    },
-    {
-     "id_categorie": 13,
-     "libelle": "Salade",
-     "image": "salade_cat.jpg",
-     "active": "YES"
-    },
-    {
-     "id_categorie": 14,
-     "libelle": "Veggie",
-     "image": "veggie_cat.jpg",
-     "active": "Yes"
+$.getJSON("assets/js/the_district.json", function(data) {
+  
+    let categories = $("#categories");
+    let i;
+
+    for (i=0; i<data.categorie.length; i++) {
+
+        let element = document.createElement("div");
+        element.className="d-flex justify-content-center mb-5";
+
+        let carte_categorie = document.createElement("div");
+        carte_categorie.className = "card w-100 border-3 bordures rounded-5 ";
+
+        let image_categorie = document.createElement("img");
+        image_categorie.src = data.categorie[i].image;
+        image_categorie.className = "card-img-top p-3 rounded-5";
+
+        let libelle = document.createElement("a");
+        libelle.textContent = data.categorie[i].libelle;
+        libelle.className = "card-text fs-3 fw-medium text-center  shadow-lg p-2 mb-3 ms-3 me-3 rounded-4 fond_logo lettres_blanches";
+        libelle.href = "plat_test_json.html?id=" + data.categorie[i].id_categorie;
+
+categories.append(element);
+element.append(carte_categorie);
+carte_categorie.append(image_categorie, libelle);
+
     }
-];
-
-let plat = 
-[
-    {
-     "id_plat": 4,
-     "libelle": "District Burger",
-     "description": "Burger composé d'un bun's du boulanger, deux steaks de 80g (origine française), de deux tranches poitrine de porc fumée, de deux tranches cheddar affiné, salade et oignons confits. .",
-     "prix": 8,
-     "image": "hamburger.jpg",
-     "id_categorie": 5,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 5,
-     "libelle": "Pizza Bianca",
-     "description": "Une pizza fine et croustillante garnie de crème mascarpone légèrement citronnée et de tranches de saumon fumé, le tout relevé de baies roses et de basilic frais.",
-     "prix": 14,
-     "image": "pizza-salmon.png",
-     "id_categorie": 4,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 9,
-     "libelle": "Buffalo Chicken Wrap",
-     "description": "Du bon filet de poulet mariné dans notre spécialité sucrée & épicée, enveloppé dans une tortilla blanche douce faite maison.",
-     "prix": 5,
-     "image": "buffalo-chicken.webp",
-     "id_categorie": 9,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 10,
-     "libelle": "Cheeseburger",
-     "description": "Burger composé d’un bun’s du boulanger, de salade, oignons rouges, pickles, oignon confit, tomate, d’un steak d’origine Française, d’une tranche de cheddar affiné, et de notre sauce maison.",
-     "prix": 8,
-     "image": "cheesburger.jpg",
-     "id_categorie": 5,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 12,
-     "libelle": "Spaghetti aux légumes",
-     "description": "Un plat de spaghetti au pesto de basilic et légumes poêlés, très parfumé et rapide",
-     "prix": 10,
-     "image": "spaghetti-legumes.jpg",
-     "id_categorie": 10,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 13,
-     "libelle": "Salade César",
-     "description": "Une délicieuse salade Caesar (César) composée de filets de poulet grillés, de feuilles croquantes de salade romaine, de croutons à l'ail, de tomates cerise et surtout de sa fameuse sauce Caesar. Le tout agrémenté de copeaux de parmesan.",
-     "prix": 7,
-     "image": "cesar_salad.jpg",
-     "id_categorie": 13,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 14,
-     "libelle": "Pizza Margherita",
-     "description": "Une authentique pizza margarita, un classique de la cuisine italienne! Une pâte faite maison, une sauce tomate fraîche, de la mozzarella Fior di latte, du basilic, origan, ail, sucre, sel & poivre...",
-     "prix": 14,
-     "image": "pizza-margherita.jpg",
-     "id_categorie": 4,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 15,
-     "libelle": "Courgettes farcies au quinoa et duxelles de champignons",
-     "description": "Voici une recette équilibrée à base de courgettes, quinoa et champignons, 100% vegan et sans gluten!",
-     "prix": 8,
-     "image": "courgettes.jpg",
-     "id_categorie": 14,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 16,
-     "libelle": "Lasagnes",
-     "description": "Découvrez notre recette des lasagnes, l'une des spécialités italiennes que tout le monde aime avec sa viande hachée et gratinée à l'emmental. Et bien sûr, une inoubliable béchamel à la noix de muscade.",
-     "prix": 12,
-     "image": "lasagnes_viande.jpg",
-     "id_categorie": 10,
-     "active": "Yes"
-    },
-    {
-     "id_plat": 17,
-     "libelle": "Tagliatelles au saumon",
-     "description": "Découvrez notre recette délicieuse de tagliatelles au saumon frais et à la crème qui qui vous assure un véritable régal!",
-     "prix": 12,
-     "image": "tagliatelles_saumon.webp",
-     "id_categorie": 10,
-     "active": "Yes"
-    }
-];
 
 
-$("#categories").html(categories[7].libelle);
+    let plats = $("#plats");
 
-$("#libelle").html(plat[7].libelle);
+    for (i=0; i<data.plat.length; i++) {
 
-$("#description").html(plat[7].description);
+        let element_plats = document.createElement("div");
+        element_plats.className="d-flex justify-content-center mb-5";
 
-$("#image_plat").html(plat[7].image);
+        let carte_plat = document.createElement("div");
+        carte_plat.className = "card w-100 border-3 bordures rounded-5 ";
 
-});
+        let image_plat = document.createElement("img");
+        image_plat.src = data.categorie[i].image;
+        image_plat.className = "card-img-top p-3 rounded-5";
+
+        let libelle_plat = document.createElement("h1");
+        libelle_plat.textContent = data.plat[i].libelle;
+        libelle_plat.className = "card-text fs-3 fw-medium text-center  shadow-lg p-2 mb-3 ms-3 me-3 rounded-4 fond_logo lettres_blanches";
+        /* libelle.href = "plat_test_json.html?id=" + data.categorie[i].id_categorie; */
+
+plats.append(element_plats);
+element_plats.append(carte_plat);
+carte_plat.append(image_plat, libelle_plat);
+
+
+
+
+
+
+
+
+
+};
+})})
