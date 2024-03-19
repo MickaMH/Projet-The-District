@@ -40,19 +40,25 @@
   "id_categorie": 13,
   "libelle": "Salade",
   "image": "assets/img/categories/salade_cat.jpg",
-  "active": "YES"
+  "active": "Yes"
  },
  {
   "id_categorie": 14,
   "libelle": "Veggie",
   "image": "assets/img/categories/veggie_cat.jpg",
   "active": "Yes"
- }
+ },
+ {
+    "id_categorie": 15,
+    "libelle": "Boisson",
+    "image": "assets/img/categories/boisson_cat.png",
+    "active": "Yes"
+}
 ],
 "plat":[
  {
   "id_plat": 4,
-  "libelle": "Burger District",
+  "libelle": "BURGER District",
   "description": "Burger composé d'un bun's du boulanger, deux steaks de 80g (origine française), de deux tranches poitrine de porc fumée, de deux tranches cheddar affiné, salade et oignons confits. .",
   "prix": 8,
   "image": "assets/img/plats/hamburger.jpg",
@@ -61,7 +67,7 @@
  },
  {
   "id_plat": 5,
-  "libelle": "Pizza Bianca",
+  "libelle": "PIZZA Bianca",
   "description": "Une pizza fine et croustillante garnie de crème mascarpone légèrement citronnée et de tranches de saumon fumé, le tout relevé de baies roses et de basilic frais.",
   "prix": 14,
   "image": "assets/img/plats/pizza_salmon.png",
@@ -70,7 +76,7 @@
  },
  {
   "id_plat": 9,
-  "libelle": "Wrap Buffalo Chicken",
+  "libelle": "WRAP Buffalo Chicken",
   "description": "Du bon filet de poulet mariné dans notre spécialité sucrée & épicée, enveloppé dans une tortilla blanche douce faite maison.",
   "prix": 5,
   "image": "assets/img/plats/chicken_wrap.jpeg",
@@ -79,7 +85,7 @@
  },
  {
   "id_plat": 10,
-  "libelle": "Burger Cheese",
+  "libelle": "BURGER Cheese",
   "description": "Burger composé d’un bun’s du boulanger, de salade, oignons rouges, pickles, oignon confit, tomate, d’un steak d’origine Française, d’une tranche de cheddar affiné, et de notre sauce maison.",
   "prix": 8,
   "image": "assets/img/plats/cheesburger.jpg",
@@ -88,16 +94,16 @@
  },
  {
   "id_plat": 12,
-  "libelle": "Pasta Spaghetti aux légumes",
+  "libelle": "PASTA Spaghettis",
   "description": "Un plat de spaghetti au pesto de basilic et légumes poêlés, très parfumé et rapide",
   "prix": 10,
-  "image": "assets/img/plats/spaghetti-legumes.jpg",
+  "image": "assets/img/plats/spaghetti_legumes.jpg",
   "id_categorie": 10,
   "active": "Yes"
  },
  {
   "id_plat": 13,
-  "libelle": "Salade César",
+  "libelle": "SALADE César",
   "description": "Une délicieuse salade Caesar (César) composée de filets de poulet grillés, de feuilles croquantes de salade romaine, de croutons à l'ail, de tomates cerise et surtout de sa fameuse sauce Caesar. Le tout agrémenté de copeaux de parmesan.",
   "prix": 7,
   "image": "assets/img/plats/cesar_salad.jpg",
@@ -106,7 +112,7 @@
  },
  {
   "id_plat": 14,
-  "libelle": "Pizza Margherita",
+  "libelle": "PIZZA Margherita",
   "description": "Une authentique pizza margarita, un classique de la cuisine italienne! Une pâte faite maison, une sauce tomate fraîche, de la mozzarella Fior di latte, du basilic, origan, ail, sucre, sel & poivre...",
   "prix": 14,
   "image": "assets/img/plats/pizza_margherita.jpg",
@@ -115,7 +121,7 @@
  },
  {
   "id_plat": 15,
-  "libelle": "Veggie Courgettes farcies",
+  "libelle": "VEGGIE Courgettes farcies",
   "description": "Voici une recette équilibrée à base de courgettes, quinoa et champignons, 100% vegan et sans gluten!",
   "prix": 8,
   "image": "assets/img/plats/courgettes.jpeg",
@@ -124,7 +130,7 @@
  },
  {
   "id_plat": 16,
-  "libelle": "Pasta Lasagnes",
+  "libelle": "PASTA Lasagnes",
   "description": "Découvrez notre recette des lasagnes, l'une des spécialités italiennes que tout le monde aime avec sa viande hachée et gratinée à l'emmental. Et bien sûr, une inoubliable béchamel à la noix de muscade.",
   "prix": 12,
   "image": "assets/img/plats/lasagnes_viande.jpg",
@@ -133,12 +139,57 @@
  },
  {
   "id_plat": 17,
-  "libelle": "Pasta Tagliatelles au saumon",
+  "libelle": "PASTA Tagliatelles",
   "description": "Découvrez notre recette délicieuse de tagliatelles au saumon frais et à la crème qui qui vous assure un véritable régal!",
   "prix": 12,
   "image": "assets/img/plats/tagliatelles_saumon.jpg",
   "id_categorie": 10,
   "active": "Yes"
- }
+ },
+ {
+    "id_plat": 20,
+    "libelle": "BOISSON Orange",
+    "description": "Bouteille de 25cl.",
+    "prix": 2,
+    "image": "assets/img/boissons/orange.png",
+    "id_categorie": 15,
+    "active": "Yes"
+   },
+   {
+    "id_plat": 21,
+    "libelle": "BOISSON Citron",
+    "description": "Bouteille de 0,5L.",
+    "prix": 2,
+    "image": "assets/img/boissons/citron.webp",
+    "id_categorie": 15,
+    "active": "Yes"
+   },
+   {
+    "id_plat": 22,
+    "libelle": "BOISSON Cola",
+    "description": "Bouteille de 33cl.",
+    "prix": 2,
+    "image": "assets/img/boissons/cola.png",
+    "id_categorie": 15,
+    "active": "Yes"
+   },
+   {
+    "id_plat": 23,
+    "libelle": "BOISSON Eau",
+    "description": "Bouteille de 0,5L.",
+    "prix": 2,
+    "image": "assets/img/boissons/eau.png",
+    "id_categorie": 15,
+    "active": "Yes"
+   },
+   {
+    "id_plat": 24,
+    "libelle": "BOISSON Gazeuse",
+    "description": "Bouteille de 33cl.",
+    "prix": 2,
+    "image": "assets/img/boissons/gazeuse.png",
+    "id_categorie": 15,
+    "active": "Yes"
+   }
 ]
 }
