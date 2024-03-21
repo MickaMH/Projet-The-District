@@ -22,6 +22,22 @@ parallax_mobile{
     background-color: #9e8590;
 }
 
+.couleur_header{
+    background-color: black;
+}
+
+.couleur_nav{
+    background-color: silver;
+}
+
+.couleur_main{
+    background-color: silver;
+}
+
+.couleur_footer{
+    background-color: black;
+}
+
 .fond_logo{
     background-color: #980848;
 }

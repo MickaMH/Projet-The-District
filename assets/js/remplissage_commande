@@ -1,0 +1,42 @@
+$(document).ready(function() {
+
+
+let full_url = document.URL;
+
+let url_array = full_url.split('=');
+
+let plat_id = url_array[url_array.length - 1];
+
+$("#commande").text(plat_id);
+console.log(plat_id); 
+
+
+
+// Supposons que vous ayez chargé votre fichier JSON via un chemin relatif
+// et que vous l'ayez stocké dans une variable appelée `jsonObj`.
+
+// La valeur de `plat_id` que vous recherchez
+$.getJSON("assets/js/the_district.json", function(data) {
+
+// Parcourez les éléments du JSON
+for (let item of data) {
+    // Vérifiez si l'id du plat correspond à la valeur recherchée
+    if (item.id === plat_id) {
+    
+        // Vous pouvez extraire les données parentes ici
+        let parentData = {
+            title: item.labels.en.value,
+            description: item.descriptions.en.value,
+            // Ajoutez d'autres propriétés parentes si nécessaire
+        };
+
+        // Faites quelque chose avec `parentData` (par exemple, affichez-le dans la console)
+        console.log("Données parentes pour l'id de plat", plat_id, ":", parentData);
+    }
+}
+
+
+
+
+})
+})
