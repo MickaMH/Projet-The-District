@@ -1,31 +1,32 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-$.getJSON("assets/js/the_district.json", function(suggestionsURL) {
-        // Écoutez les événements de saisie dans la barre de recherche
-        $("#recherche_dynamique").on("input", handleInput);
+    $.getJSON("assets/js/the_district.json", function(data3) { // Vos données JSON
 
-        async function handleInput(event) {
-            let userInput = event.target.value.toLowerCase();
+    // Obtenez la valeur de la barre de recherche
+    let recherche = document.getElementById('recherche_dynamique');
 
-            try {
-                let response = await fetch(suggestionsURL);
-                let data = await response.json();
+    recherche.addEventListener('keyup', (e) => {
 
-                let filteredSuggestions = data.suggestions.filter(suggestion =>
-                    suggestion.toLowerCase().includes(userInput)
-                );
+    let recherche_minuscule = e.target.value.toLowerCase();
 
-                // Affichez les suggestions filtrées sous la barre de saisie
-                let suggestionsList = $("#suggestions_list");
-                suggestionsList.empty(); // Effacez les suggestions précédentes
+    // Filtrer les données en fonction de la saisie de l'utilisateur
+    let donnees_filtrees = data3.plat.filter(plat => {
 
-                filteredSuggestions.forEach(suggestion => {
-                    let listItem = $("<li>").text(suggestion).addClass("list-group-item");
-                    suggestionsList.append(listItem);
-                });
-            } catch (error) {
-                console.error("Erreur lors de la récupération des suggestions :", error);
-            }
-        }
+        return plat.libelle.toLowerCase().includes(recherche_minuscule);
+
+    });
+
+    // Afficher les résultats filtrés
+    displayResults(donnees_filtrees);
+
+});
+
+    function displayResults(resultats) {
+        // Ici, vous pouvez définir comment vous voulez afficher les résultats
+        // Par exemple, vous pouvez les ajouter à une liste dans votre HTML
+        console.log(resultats);
+        $("#suggestions").text(resultats);
+
+    }
 
 })})

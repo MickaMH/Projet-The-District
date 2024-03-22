@@ -25,6 +25,8 @@ $(document).ready(function() {
     
     element.append(carte_categorie);
     
-    carte_categorie.append(image_categorie, libelle_categorie);}});
+    carte_categorie.append(image_categorie, libelle_categorie);}
+
+});
 
 })

@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-$.getJSON("assets/js/the_district.json", function(data2) {
+    $.getJSON("assets/js/the_district.json", function(data2) {
 
-    let plats = $("#plats");
+        let plats = $("#plats");
   
-    for (i=0; i<data2.plat.length; i++) {
+        for (i=0; i<data2.plat.length; i++) {
   
         let element_plats = document.createElement("div");
         element_plats.className="col-lg-4 p-lg-5 pb-lg-0 mb-3 mt-3";
@@ -29,10 +29,12 @@ $.getJSON("assets/js/the_district.json", function(data2) {
         commander_plat.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
         commander_plat.href = "commande_json.html?id=" + data2.plat[i].id_plat;
   
-  plats.append(element_plats);
+    plats.append(element_plats);
   
-  element_plats.append(carte_plat);
+    element_plats.append(carte_plat);
   
-  carte_plat.append(image_plat, libelle_plat, description_plat, commander_plat);}});
+    carte_plat.append(image_plat, libelle_plat, description_plat, commander_plat);}
+  
+});
 
 })
