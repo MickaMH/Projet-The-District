@@ -46,7 +46,6 @@ parallax_mobile{
     border-radius: 2rem 2rem;
 }
 
-
 .hamburger.navbar-toggler-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(152,8,72,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -65,7 +64,6 @@ parallax_mobile{
 
 .bordures_main{
     border-top: 0.3rem solid #980848;
-    /* background-color: #fef4e8; */
 }
 
 .bordures_footer{
@@ -104,9 +102,14 @@ parallax_mobile{
     text-decoration: none;
 }
 
-/* .fond_cartes{
-    background-color: #fef4e8;
-} */
+.champ_suggestions{
+    background-color: white;
+    border: 0.2rem solid #980848;
+    border-top: none;
+    border-bottom-left-radius: 2rem 2rem;
+    border-bottom-right-radius: 2rem 2rem;
+
+}
 
 .bouton{
     background-color: #980848;

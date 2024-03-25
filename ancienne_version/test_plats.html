@@ -491,7 +491,7 @@
 
 </div>
 
-
+----------------------------------------------------------------------------
 
 let commande = $("#commande");
 
@@ -529,3 +529,55 @@ carte_commande.append(image_commande, libelle_commande, description_commande, pr
 
 
 $("#commande").text("ID:" + plat_id);
+
+
+
+
+
+
+-----------------------------------------------------------------------
+
+let image_plat = document.createElement("img");
+image_plat.src = Object.plat.image;
+image_plat.className = "img-fluid";
+
+let libelle_plat = document.createElement("a");
+libelle_plat.textContent = Object.value(1);
+libelle_plat.className = "card-text fs-3 fw-medium ms-3";
+libelle_categorie.href = "commande_json.html?id=" + data3.plat.id_plat;
+
+donnees_filtrees.append(image_plat, libelle_plat);
+
+
+
+
+
+----------------------------------------------------------------------------
+
+
+
+// Récupérez le champ de texte et la liste de suggestions
+const searchInput = document.querySelector('.search');
+const suggestionsList = document.querySelector('.suggestions');
+
+// Liste de mots clés (vous pouvez la remplacer par vos propres données)
+const keywords = ['Mot1', 'Mot2', 'Mot3', 'Mot4', 'Mot5'];
+
+// Écoutez l'événement de saisie dans le champ de texte
+searchInput.addEventListener('input', displaySuggestions);
+
+function displaySuggestions() {
+    const inputValue = searchInput.value.toLowerCase();
+    const filteredKeywords = keywords.filter(keyword => keyword.toLowerCase().startsWith(inputValue));
+
+    // Affichez les suggestions correspondantes
+    suggestionsList.innerHTML = '';
+    filteredKeywords.forEach(keyword => {
+        const li = document.createElement('li');
+        li.textContent = keyword;
+        suggestionsList.appendChild(li);
+    });
+
+    // Affichez la liste de suggestions
+    suggestionsList.style.display = 'block';
+}
