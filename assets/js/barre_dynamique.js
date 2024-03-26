@@ -1,48 +1,57 @@
-    $(document).ready(function () {
+// Chargement du fichier JSON (assurez-vous que le chemin est correct)
+fetch('assets/js/the_district.json')
 
-    // Obtenez la valeur de la barre de recherche
-    let recherche = document.getElementById("recherche_dynamique");
+  .then(response => response.json())
+  .then(data3 => {
+
+    let searchInput = document.getElementById('recherche_dynamique');
+
+    let resultsList = document.getElementById('suggestions');
+
+    searchInput.addEventListener('input', () => {
+
+        let searchTerm = searchInput.value.toLowerCase();
+
+        let filteredPlats = data3.plat.filter(plat =>
+            plat.libelle.toLowerCase().includes(searchTerm)
+        );
+
+    // Efface les résultats précédents
+    resultsList.innerHTML = '';
+
+    // Affiche les résultats filtrés
+    filteredPlats.forEach(plat => {
+
+            /* let div_suggestions = document.createElement('div');
+            div_suggestions.className = "border-3 bordures" */
+
+
+            let li = document.createElement('li');
+            li.className = "text-decoration-none";
+          
+      
+            let img = document.createElement('img');
+            img.src = plat.image; // Assurez-vous que le chemin est correct
+            img.alt = plat.libelle;
+            img.className = /* "p-1 rounded-4";  */   "p-1 rounded-3";
+            img.style = "width: 7rem; height: 7rem;";
+            li.appendChild(img);
+        
+          
+            let libelle = document.createElement('a');
+            libelle.textContent = plat.libelle;
+            libelle.className = "ms-1 text-decoration-none";
+            libelle.style = "color: black";
+            libelle.href = "commande_json.html?id=" + data3.plat.id_plat;
+            
+            /* div_suggestions.append(li); */
+            li.append(img, libelle);
+            
+            
+            resultsList.appendChild(li);
     
-
-    $.getJSON("assets/js/the_district.json", function(data3) { // Vos données JSON
-
-    recherche.addEventListener('keyup', (e) => {
-
-        let recherche_minuscule = e.target.value.toLowerCase(recherche);
-        
-        // Filtrer les données en fonction de la saisie de l'utilisateur
-        let donnees_filtrees_object = data3.plat.filter(plat => {return plat.libelle.toLowerCase().includes(recherche_minuscule);
-        
+      });
     });
+  })
 
-    let donnees_filtrees = JSON.stringify(donnees_filtrees_object);
-    // Afficher les résultats filtrés
-    displayResults(donnees_filtrees);
-    
-    let suggestions = $("#suggestions");
-    
-    let image_plat = document.createElement('img');
-    image_plat.src = data3.plat.image;
-    image_plat.className = 'img-fluid';
-
-    let libelle_plat = document.createElement('a');
-    libelle_plat.href = 'index.html?id=' + plat.id_plat;
-    libelle_plat.textContent = data3.plat.libelle;
-
-    let libelle_plat_string = JSON.stringify(libelle_plat);
-
-    suggestions.append(image_plat, libelle_plat_string);
-
-    });
-
-    function displayResults(donnees_filtrees) {
-        // Ici, vous pouvez définir comment vous voulez afficher les résultats
-        // Par exemple, vous pouvez les ajouter à une liste dans votre HTML
-        
-        $("#suggestions").text(donnees_filtrees);
-        console.log(donnees_filtrees);
-    }
-
-})})
-
-    
+  .catch(error => console.error('Erreur lors du chargement du fichier JSON :', error));

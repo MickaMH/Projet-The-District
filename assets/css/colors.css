@@ -102,14 +102,40 @@ parallax_mobile{
     text-decoration: none;
 }
 
+
+
+loupe{
+    background-color: white;
+    border-top-left-radius: 1rem 1rem;
+}
+
+.champ_recherche{
+    /* border-top-left-radius: 1rem 1rem;
+    border-top-right-radius: 1rem 1rem;
+    border-bottom-left-radius: 1rem 1rem;
+    border-bottom-right-radius: 1rem 1rem; */
+
+    border-top-left-radius: 0.5rem 0.5rem;
+    border-top-right-radius: 0.5rem 0.5rem;
+    border-bottom-left-radius: 0.5rem 0.5rem;
+    border-bottom-right-radius: 0.5rem 0.5rem;
+}
+
 .champ_suggestions{
     background-color: white;
-    border: 0.2rem solid #980848;
-    border-top: none;
-    border-bottom-left-radius: 2rem 2rem;
-    border-bottom-right-radius: 2rem 2rem;
 
+    /* border-bottom-left-radius: 1rem 1rem;
+    border-bottom-right-radius: 1rem 1rem; */
+
+    border-bottom-left-radius: 0.5rem 0.5rem;
+    border-bottom-right-radius: 0.5rem 0.5rem;
 }
+
+li {
+    list-style-type: none;
+}
+
+
 
 .bouton{
     background-color: #980848;
