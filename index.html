@@ -82,7 +82,7 @@
 
             </div>
     
-            <div class="col-4 position-relative display-inline-block d-flex p-0 couleur_fond">
+            <div class="col-4 d-flex p-0 position-relative display-inline-block">
 
                 <video autoplay loop muted class="img-fluid ">
 
@@ -93,7 +93,7 @@
     
             </div>
 
-            <div class="col-4 d-flex p-0 couleur_fond">
+            <div class="col-4 d-flex p-0">
 
                 <!-- <img src="#" class="img-fluid" alt="" title=""> -->
                 <video autoplay loop muted class="img-fluid ">
@@ -104,14 +104,21 @@
                 </video>      
 
             </div>
-            
-            <div class="col-4 position-absolute d-flex align-self-center flex-column">
-    
-                <input type="text" class="w-100 fs-4 fw-medium form-control d-none d-lg-block champ_recherche" 
-                        placeholder="&#x1F50E; Rechercher un plat" aria-label="Rechercher" id="recherche_dynamique">
-            
-                <div id="suggestions" class="fs-4 fw-medium d-none d-lg-block champ_suggestions"></div>
+
+            <div class="position-absolute input-group d-flex flex-column align-self-center justify-content-center
+                        w-25 d-none d-lg-block champ_recherche">
+
+                <div class="d-flex p-1 ms-2">
+
+                    <span class="input-group-text fs-4 sans_bordures bg-white" id="basic-addon1">&#x1F50E;</span>
+
+                    <input type="text" class="ms-1 fs-4 fw-medium form-control sans_bordures" 
+                            placeholder="Rechercher un plat" aria-label="Rechercher" id="recherche_dynamique">
                 
+                </div>
+
+                <div id="suggestions" class="fs-4 fw-medium"></div>
+                        
             </div>
                
         </div>

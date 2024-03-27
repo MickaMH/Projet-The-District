@@ -17,7 +17,7 @@
 
 <div class="parallax_desktop">
 
-    <header class="container-fluid bordures_header couleur_header">
+    <header class="container-fluid bordures_header couleur_fond">
 
         <div class="row">
     
@@ -66,9 +66,9 @@
     </header>
     
     
-    <nav class="container-fluid couleur_nav">
+    <nav class="container-fluid couleur_fond">
     
-        <div class="row ">
+        <div class="row d-flex justify-content-center">
 
             <div class="col-4 d-flex p-0">
 
@@ -105,10 +105,20 @@
 
             </div>
                
-            <div class="col-4 offset-4 position-absolute d-flex align-self-center">
-    
-                <input type="text" class="w-100 fs-4 me-3 fw-medium rounded-5 form-control border-4 d-none d-lg-block bordures" placeholder="&#x1F50E; Rechercher un plat" aria-label="Rechercher">
+            <div class="position-absolute input-group d-flex flex-column align-self-center justify-content-center
+                        w-25 d-none d-lg-block champ_recherche">
+
+                <div class="d-flex p-1 ms-2">
+
+                    <span class="input-group-text fs-4 sans_bordures bg-white" id="basic-addon1">&#x1F50E;</span>
+
+                    <input type="text" class="ms-1 fs-4 fw-medium form-control sans_bordures" 
+                            placeholder="Rechercher un plat" aria-label="Rechercher" id="recherche_dynamique">
                 
+                </div>
+
+                <div id="suggestions" class="fs-4 fw-medium"></div>
+                        
             </div>
                
         </div>
@@ -116,7 +126,7 @@
     </nav>
 
 
-    <main class="container-fluid pb-5 bordures_main couleur_main">
+    <main class="container-fluid pb-5 bordures_main">
 
         <div class="row">
 
@@ -128,7 +138,9 @@
 
         </div>
 
-        <!-- <div class="row d-flex justify-content-center">
+        <!--Card Verticale -->
+
+        <div class="row d-flex justify-content-center">
 
             <div class="col-lg-3 mt-3 mt-lg-5 me-lg-5 mb-4 mb-lg-5 d-block d-sm-none" name="verticale">
 
@@ -175,16 +187,24 @@
 
             </div>
 
+            <!--Card Horizontale -->
+
             <div class="col-lg-5 mt-3 mt-lg-5 mb-4 mb-lg-5 d-none d-lg-block" name="horizontale">
 
                 <div class="card border-3 bordures rounded-5 flex-row" style="width: 50rem; height: auto;">
 
+
+                    <div id="image_commande"></div>
                     <img src="assets/img/plats/image_plat_vierge.png" class="card-img-top p-3 rounded-5" style="width: 25rem; height: auto;" alt="">
+
 
                     <div class="card-body p-3">
 
-                        <h5 class="card-title fs-1 mb-2">Libellé Plat</h5>
-                        <p class="card-text fst-italic fw-medium fs-5 mb-5">"Description du plat"</p>
+
+                            <div id="libelle_description_prix_commande"></div>
+                            <h5 class="card-title fs-1 mb-2">Libellé Plat</h5>
+                            <p class="card-text fst-italic fw-medium fs-5 mb-5">"Description du plat"</p>
+
 
                         <div class="text-center">
 
@@ -199,7 +219,7 @@
 
             </div>
 
-        </div> -->
+        </div>
 
 
 
@@ -210,41 +230,32 @@
         </div>
 
 
-        <div class="row">
-
-            <div id="commande" class=""></div>
-        
-        </div>
-
-
-
-
         <form action="#" method="GET" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
             <div class="col-sm-10 col-lg-5 mb-5 mt-3 mt-lg-0">
 
-                <input type="text" class="form-control fs-4 border-3 bordures" id="nom" placeholder="Nom*(sans accents)" required>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nom" placeholder="Nom*(sans accents)" required>
                 <span id="requisNom"></span>
 
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-5">
                 
-                <input type="text" class="form-control fs-4 border-3 bordures" id="prenom" placeholder="Prénom*(sans accents)" required>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="prenom" placeholder="Prénom*(sans accents)" required>
                 <span id="requisPrenom"></span>
 
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
 
-                <input type="email" class="form-control fs-4 border-3 bordures" id="mail" placeholder="Email*" required>
+                <input type="email" class="form-control fs-4 border-3 bordures fond_input" id="mail" placeholder="Email*" required>
                 <span id="requisMail"></span>
 
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-4">
 
-                <input type="text" class="form-control fs-4 border-3 bordures" id="phone" placeholder="Téléphone*" required>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phone" placeholder="Téléphone*" required>
                 <span id="requisPhone"></span>
 
             </div>
@@ -252,14 +263,14 @@
             <div class="col-sm-10 col-lg-10 mb-3">
 
                 <label class="form-label"></label>
-                <textarea class="form-control fs-4 border-3 bordures" rows="3" id="adresse" placeholder="Votre adresse*" required></textarea>
+                <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" id="adresse" placeholder="Votre adresse*" required></textarea>
                 <span id="requisAdresse"></span>
 
             </div>
 
             <div class="col-sm-12 col-lg-10 fs-5 ms-3">
 
-                <p class="lettres_blanches"><sup>*</sup> Tous les champs sont obligatoires</p>
+                <p class="lettres_noires"><sup>*</sup> Tous les champs sont obligatoires</p>
 
             </div>
 
@@ -324,6 +335,8 @@
 <script src="assets/js/remplissage_commande.js"></script>
 
 <script src="assets/js/validation_commande.js"></script>
+
+<script src="assets/js/barre_dynamique.js"></script>
 
 </body>
 </html>
