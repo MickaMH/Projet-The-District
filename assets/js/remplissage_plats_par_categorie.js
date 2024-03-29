@@ -1,52 +1,84 @@
-let full_url = document.URL;
-let url_array = full_url.split('=');
-let categorie_id = url_array[url_array.length - 1];
-console.log(typeof categorie_id, categorie_id);
-
+// Fetch the JSON file
 fetch('assets/js/the_district.json')
-  .then((response) => response.json())
-  .then((data4) => {
 
-    let data = JSON.parse(data4);
-    // Declare id_categorie
-    let id_categorie = data.id_categorie;
-    console.log(typeof id_categorie, id_categorie);
-
-    let filtre_plats = data.plat.filter(plat => plat.id_categorie === categorie_id);
-
-    const platsCategorie = document.getElementById("plats_par_categorie");
-
-    filtre_plats.forEach(plat => {
-        
-        let element_plats = document.createElement("div");
-        element_plats.className = "col-lg-4 p-lg-5 pb-lg-0 mb-3 mt-3";
-      
-        let carte_plat = document.createElement("div");
-        carte_plat.className = "card w-100 border-4 bordures rounded-5";
-      
-        let image_plat = document.createElement("img");
-        image_plat.src = plat.image;
-        image_plat.className = "card-img-top p-3 rounded-5";
-      
-        let libelle_plat = document.createElement("h5");
-        libelle_plat.textContent = plat.libelle;
-        libelle_plat.className = "card-text fs-3 fw-medium ms-3";
-      
-        let description_plat = document.createElement("p");
-        description_plat.textContent = plat.description;
-        description_plat.className = "card-text fst-italic fw-medium ms-3 me-3";
-      
-        let commander_plat = document.createElement("a");
-        commander_plat.textContent = "Commander";
-        commander_plat.className = `card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches`;
-        commander_plat.href = `commande_json.html?id=${plat.id_plat}`;
-      
-        platsCategorie.append(element_plats);
-        element_plats.append(carte_plat);
-        carte_plat.append(image_plat, libelle_plat, description_plat, commander_plat);
-
-    });
+  .then(function(response) {
+    return response.json();
   })
-  .catch((error) => {
-    console.error('Erreur lors du chargement du fichier JSON :', error);
-  });
+
+  .then(function(data) {
+// Get the id from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const idFromUrl = urlParams.get('id');
+    console.log(idFromUrl);
+
+// Filter the plates based on the id_categorie
+    const filteredPlates = data.plat.filter(function(plate) {
+      return plate.id_categorie === parseInt(idFromUrl);
+    });
+
+// Display the category title in a separate div
+    const categoryTitleDiv = document.createElement('div');
+    categoryTitleDiv.id = 'libelle_categorie';
+    categoryTitleDiv.innerText = ' '; // Set the initial inner text to ' ' for better formatting
+    document.body.appendChild(categoryTitleDiv);
+
+// Display the filtered plates in the div
+    const div = document.getElementById('plats_par_categorie');
+    div.innerHTML = '';
+
+// Get the category title based on the first plate's libelle
+    const firstPlate = filteredPlates[0];
+    const libelle_categorie = firstPlate.libelle.split(' ')[0];
+    const categoryTitle = document.getElementById('libelle_categorie');
+    categoryTitle.innerHTML = '';
+    const categoryTitleElement = document.createElement('h1');
+    categoryTitleElement.className = "col-sm-10 col-lg-4 fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 lettres_neon";
+    categoryTitleElement.innerText = libelle_categorie;
+    categoryTitle.appendChild(categoryTitleElement);
+
+
+    filteredPlates.forEach(function(plate) {
+
+    const element_plat = document.createElement("div");
+    element_plat.className="col-lg-4 p-lg-5 pb-lg-0 mb-3 mt-3";
+    // div.appendChild(element_plat);
+
+    const carte_plat = document.createElement("div");
+    carte_plat.className = "card w-100 border-4 bordures rounded-5";
+
+    const image_plat = document.createElement("img");
+    image_plat.src = plate.image;
+    image_plat.className = "card-img-top p-3 rounded-5";
+
+    const libelle_plat = document.createElement("h5");
+    libelle_plat.textContent = plate.libelle;
+    libelle_plat.className = "card-text fs-3 fw-medium ms-3";
+
+    const description_plat = document.createElement("p");
+    description_plat.textContent = plate.description;
+    description_plat.className = "card-text fst-italic fw-medium ms-3 me-3";
+
+    const commander_plat = document.createElement("a");
+    commander_plat.textContent = "Commander";
+    commander_plat.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
+    commander_plat.href = "commande.html?id=" + plate.id_plat;
+
+    div.appendChild(element_plat);
+  
+    element_plat.appendChild(carte_plat);
+  
+    carte_plat.appendChild(image_plat);
+    carte_plat.appendChild(libelle_plat);
+    carte_plat.appendChild(description_plat);
+    carte_plat.appendChild(commander_plat);
+    
+  })
+
+  .catch(function(error) {
+    console.error(error);
+
+  })});
+
+
+  
+    

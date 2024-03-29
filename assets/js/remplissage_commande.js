@@ -1,61 +1,137 @@
-$(document).ready(function() {
+/*CARTE HORIZONTALE*/
 
-    $.getJSON("assets/js/the_district.json", function(data) {
+// Fetch the JSON file
+fetch('assets/js/the_district.json')
 
-    let full_url = document.URL;
+  .then(function(response) {
+    return response.json();
+  })
 
-    let url_array = full_url.split('=');
+  .then(function(data) {
+// Get the id from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const idFromUrl = urlParams.get('id');
+    console.log(idFromUrl);
 
-    let plat_id = url_array[url_array.length - 1];
+// Filter the plates based on the id_categorie
+    const filteredPlates = data.plat.filter(function(plate) {
+      return plate.id_plat === parseInt(idFromUrl);
+    });
 
-    $("#controle_id").text(plat_id);
-    console.log(plat_id);
+// Display the filtered plates in the div
 
-/* 
-        if( data3.plat.id_plat === plat_id){
+    const div_1 = document.getElementById('image_commande_horizontale');
+    div_1.innerHTML = '';
 
-            let commande = $("#commande");
+    const div_2 = document.getElementById('libelle_description_commande_horizontale');
+    div_2.innerHTML = '';
 
-            let element_commande = document.createElement("div");
-            element_commande.className="col-lg-4 p-lg-5 pb-lg-0 mb-3 mt-3";
+    const div_3 = document.getElementById('prix_commande_horizontale');
+    div_3.innerHTML = '';
 
-            let carte_commande = document.createElement("div");
-            carte_commande.className = "card w-100 border-4 bordures rounded-5 ";
+    filteredPlates.forEach(function(plate) {
 
-            let image_commande = document.createElement("img");
-            image_commande.src = data3.plat.id_plat.image;
-            image_commande.className = "card-img-top p-3 rounded-5";
+    const image_plat = document.createElement("img");
+    image_plat.src = plate.image;
+    image_plat.className = "card-img-top p-3 rounded-5";
+    image_plat.style = "width: 25rem; height: auto;";
 
-            let libelle_commande = document.createElement("h5");
-            libelle_commande.textContent = data3.plat.id_plat.libelle;
-            libelle_commande.className = "card-title fs-3 fw-medium ms-3";
+    const libelle_plat = document.createElement("h5");
+    libelle_plat.textContent = plate.libelle;
+    libelle_plat.className = "card-title fs-1 mb-2";
 
-            let description_commande = document.createElement("p");
-            description_commande.textContent = data3.plat.id_plat.description;
-            description_commande.className = "card-text fst-italic fw-medium ms-3 me-3";
+    const description_plat = document.createElement("p");
+    description_plat.textContent = plate.description;
+    description_plat.className = "card-text fst-italic fw-medium fs-5 mb-3";
 
-            let prix_commande = document.createElement("p");
-            prix_commande.textContent = data3.plat.id_plat.prix;
-            prix_commande.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
+    const prix_plat = document.createElement("p");
+    prix_plat.textContent = plate.prix;
+    prix_plat.className = "card-text fw-medium fs-5";
 
-    commande.append(element_commande);
+    div_1.appendChild(image_plat);
 
-    element_commande.append(carte_commande);
+    div_2.appendChild(libelle_plat);
+    div_2.appendChild(description_plat);
 
-    carte_commande.append(image_commande, libelle_commande, description_commande, prix_commande);
+    div_3.appendChild(prix_plat);
+  
+    
+  })
 
-} */
+  .catch(function(error) {
+    console.error(error);
 
-let searchValue = plat_id;
-
-$.each(data.plat.id_plat, function(key, value) {
-
-  if(value === searchValue) {
-
-    console.log("La clé correspondante à la valeur recherchée est : " + key);
-  }
+  })});
 
 
+
+
+/*CARTE VERTICALE*/
+
+  
+  // Fetch the JSON file
+fetch('assets/js/the_district.json')
+
+.then(function(response) {
+  return response.json();
 })
 
-})})
+.then(function(data2) {
+// Get the id from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const idFromUrl = urlParams.get('id');
+  console.log(idFromUrl);
+
+// Filter the plates based on the id_categorie
+  const filteredPlates = data2.plat.filter(function(plate) {
+    return plate.id_plat === parseInt(idFromUrl);
+  });
+
+// Display the filtered plates in the div
+
+  const div_1 = document.getElementById('image_commande_verticale');
+  div_1.innerHTML = '';
+
+  const div_2 = document.getElementById('libelle_description_commande_verticale');
+  div_2.innerHTML = '';
+
+  const div_3 = document.getElementById('prix_commande_verticale');
+  div_3.innerHTML = '';
+
+  filteredPlates.forEach(function(plate) {
+
+  const image_plat = document.createElement("img");
+  image_plat.src = plate.image;
+  image_plat.className = "card-img-top p-3 rounded-5 img-fluid";
+  image_plat.style = "width: 25rem; height: auto;";
+
+  const libelle_plat = document.createElement("h5");
+  libelle_plat.textContent = plate.libelle;
+  libelle_plat.className = "card-title fs-1 mb-2";
+
+  const description_plat = document.createElement("p");
+  description_plat.textContent = plate.description;
+  description_plat.className = "card-text fst-italic fw-medium fs-5 mb-3";
+
+  const prix_plat = document.createElement("p");
+  prix_plat.textContent = plate.prix;
+  prix_plat.className = "card-text fw-medium fs-5";
+
+  div_1.appendChild(image_plat);
+
+  div_2.appendChild(libelle_plat);
+  div_2.appendChild(description_plat);
+
+  div_3.appendChild(prix_plat);
+
+  
+})
+
+.catch(function(error) {
+  console.error(error);
+
+})});
+
+
+
+    
