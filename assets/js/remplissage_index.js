@@ -64,7 +64,7 @@ $(document).ready(function() {
         let commander_plat1 = document.createElement("a");
         commander_plat1.textContent = "Commander";
         commander_plat1.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-        commander_plat1.href = "commande_json.html?id=" + data1.plat[indexPlat1].id_plat;
+        commander_plat1.href = "commande.html?id=" + data1.plat[indexPlat1].id_plat;
     
         plat_1.append(element_plats1);
         element_plats1.append(panneau_carte_plat1, carte_plat1);
@@ -105,7 +105,7 @@ $(document).ready(function() {
         let commander_plat2 = document.createElement("a");
         commander_plat2.textContent = "Commander";
         commander_plat2.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-        commander_plat2.href = "commande_json.html?id=" + data2.plat[indexPlat2].id_plat;
+        commander_plat2.href = "commande.html?id=" + data2.plat[indexPlat2].id_plat;
     
         plat_2.append(element_plats2);
         element_plats2.append(panneau_carte_plat2, carte_plat2);
@@ -181,7 +181,7 @@ $(document).ready(function() {
         let commander_plat1 = document.createElement("a");
         commander_plat1.textContent = "Commander";
         commander_plat1.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-        commander_plat1.href = "commande_json.html?id=" + data1.plat[indexPlat1].id_plat;
+        commander_plat1.href = "commande.html?id=" + data1.plat[indexPlat1].id_plat;
     
         plat_1.append(element_plats1);
         element_plats1.append(panneau_carte_plat1, carte_plat1);
@@ -222,7 +222,7 @@ $(document).ready(function() {
         let commander_plat2 = document.createElement("a");
         commander_plat2.textContent = "Commander";
         commander_plat2.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-        commander_plat2.href = "commande_json.html?id=" + data2.plat[indexPlat2].id_plat;
+        commander_plat2.href = "commande.html?id=" + data2.plat[indexPlat2].id_plat;
     
         plat_2.append(element_plats2);
         element_plats2.append(panneau_carte_plat2, carte_plat2);
