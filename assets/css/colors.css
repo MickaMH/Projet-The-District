@@ -1,5 +1,5 @@
-parallax_desktop{
-    background-image: url("/assets/img/parallax/parallax_desktop_couleur.png");
+.parallax_desktop{
+    background-image: url("/assets/img/parallax/parallax_blanc_smoke_2.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,11 @@ parallax_mobile{
     background-size: cover;
 }
 
-.bordures_body{
+bod{
+    background-color: #fef4e8 ;
+}
+
+bordures_body{
     border: 0.1rem solid black;
 }
 
@@ -42,16 +46,14 @@ parallax_mobile{
     background-color: #980848;
 }
 
-
 .bordures_logo{
-    border-radius: 2rem 2rem;
+    border-radius: 25%;
 }
 
 
 .hamburger.navbar-toggler-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(152,8,72,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
 
 .hamburger.navbar-toggler{
     border-color: #980848;
@@ -63,28 +65,35 @@ parallax_mobile{
 }
 
 
-.bordures_header{
+bordures_header{
     border-bottom: 0.3rem solid #980848;
 }
 
+bordures_nav{
+    border-top: 0.3rem solid #980848;
+    border-bottom: 0.3rem solid #980848;
+}
 
-.bordures_main{
+bordures_main{
     border-top: 0.3rem solid #980848;
 }
 
 
-.bordures_footer{
+bordures_footer{
     border-top: 0.3rem solid #980848;
 }
 
+.rond{
+    border-radius: 5rem 5rem;
+    border: 0.2rem solid black;
+    background-color: white;
+}
 
 .zoom{
-    transition: transform .4s;
+    transition: transform .6s;
 }
-
-
 .zoom:hover{
-    transform: scale(1.2);
+    transform: scale(1.7);
 }
 
 
@@ -109,10 +118,33 @@ parallax_mobile{
                     0 0 54px #bb0a59;
 }
 
+.bienvenue_desktop{
+    color: #980848;
+    font-size: 5rem;
+}
+
+.bienvenue_mobile{
+    color: white;
+    font-size: 3.5rem;
+    background-color: #980848;
+    border: 0.1rem solid white;
+    border-radius: 0.5rem 0.5rem;
+}
+
+bordures_bienvenue_mobile{
+    border-top: 0.1rem solid #980848;
+    border-bottom: 0.1rem solid #980848;
+}
 
 .liens_header{
     color: #980848;
     text-decoration: none;
+}
+
+.liens_header_souligne{
+    color: #980848;
+    text-decoration: none;
+    text-decoration: underline 0.3rem solid #980848;
 }
 
 
@@ -230,7 +262,7 @@ sup{
     border-color: #980848;
 }
 
-
+p{color: black;}
 
 
 

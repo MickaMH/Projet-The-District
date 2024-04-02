@@ -13,100 +13,155 @@
     <title>Contact</title>
 </head>
 
-<body class="m-2 bordures_body">
 
-    <div class="parallax_desktop">
+<body class="m-1 bordures_body parallax_desktop">
 
-        <header class="container-fluid bordures_header couleur_fond">
 
-            <div class="row">
-        
-                <nav class="navbar navbar-expand-lg m-2">
-        
-                    <div class="container-fluid">
-        
-                      <button class="navbar-toggler border-3 hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        
-                        <span class="navbar-toggler-icon hamburger"></span>
-        
-                      </button>
-                      
-                      <img src="assets/images/logo_transparent_blanc.png" alt="Logo The District" title="Logo The District" class="navbar-brand img-fluid col-4 col-lg-1 bordures_logo fond_logo">
-                      
-                      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        
-                        <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0 fs-1 fw-medium">
+    <!-- HEADER -->
+    <header class="container-fluid bordures_heade">
+
+        <div class="row">
+
+            <!-- navbar -->
+            <div class="navbar navbar-expand-lg">
+
+                <div class="container-fluid">
     
-                            <li class="nav-item me-lg-5 my-auto">
-                            <a class="liens_header" aria-current="page" href="index.html">ACCUEIL</a>
-                            </li>
+                    <button class="navbar-toggler border-3 hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     
-                            <li class="nav-item ms-lg-5 me-lg-5 my-auto">
-                            <a class="liens_header" aria-current="page" href="categories.html">CATEGORIES</a>
-                            </li>
+                    <span class="navbar-toggler-icon hamburger"></span>
     
-                            <li class="nav-item ms-lg-5 me-lg-5 my-auto">
-                            <a class="liens_header" aria-current="page" href="plats.html">PLATS</a>
-                            </li>
+                    </button>
+
+                    <!-- images logo desktop et mobile -->
+                    <div class="col-3 col-lg-2">
+                    
+                        <img src="assets/img/district/logo.png" alt="Logo The District" 
+                                title="Logo The District" class="w-100 navbar-brand img-fluid d-none d-lg-block bordures_logo">
+
+                        <img src="assets/img/district/logo.png" alt="Logo The District" 
+                                title="Logo The District" class="w-100 navbar-brand img-fluid d-block d-sm-none bordures_logo">        
+                
+                    </div>  
+
+                    <div class="col-9 col-lg-10 flex-column">
+
+                        <div class="row">
+
+                            <!-- liens navbar -->
+                            <div class="collapse navbar-collapse justify-content-center ms-2 mb-lg-5" id="navbarTogglerDemo03">
     
-                            <li class="nav-item ms-lg-5 my-auto">
-                            <a class="lettres_neon" aria-current="page" href="contact.html">CONTACT</a>
-                            </li>
+                                <ul class="navbar-nav fs-1 fw-medium gap-lg-5">
     
-                        </ul>
+                                    <li class="nav-item">
+
+                                        <a class="liens_header" aria-current="page" href="index.html">ACCUEIL</a>
+
+                                    </li>
+    
+                                    <li class="nav-item">
+
+                                        <a class="liens_header" aria-current="page" href="categories.html">CATEGORIES</a>
+
+                                    </li>
+    
+                                    <li class="nav-item">
+
+                                        <a class="liens_header" aria-current="page" href="plats.html">PLATS</a>
+
+                                    </li>
+    
+                                    <li class="nav-item">
+
+                                        <a class="liens_header_souligne" aria-current="page" href="contact.html">CONTACT</a>
+
+                                    </li>
+    
+                                </ul>
+                    
+                            </div>
+
+                        </div>
+
+                        <!-- barre de recherche -->
+                        <div class="row justify-content-center mb-lg-5">
+
+                            <div class="position-absolute z-3 input-group d-flex flex-column 
+                                        d-none d-lg-block champ_recherche" style="width: 30rem; height: auto;">
+
+                                <div class="d-flex p-1 ms-2">
+
+                                    <span class="input-group-text fs-4 sans_bordures bg-white" id="basic-addon1">&#x1F50E;</span>
+
+                                    <input type="text" class="ms-1 fs-4 fw-medium form-control sans_bordures" 
+                                            placeholder="Rechercher un plat" aria-label="Rechercher" id="recherche_dynamique">
+                
+                                </div>
+
+                                <div id="suggestions" class="fs-4 fw-medium"></div>
                         
-                      </div>
-        
+                            </div>
+
+                        </div>
+    
                     </div>
-        
-                  </nav>
-        
+
+                </div>
+    
             </div>
-            
-        </header>
+
+        </div>
         
-        
-        <nav class="container-fluid">
+    </header>
+
     
-            <div class="row d-flex justify-content-center">
+    <!-- NAV -->
+    <nav class="container-fluid">
     
-                <div class="col-4 d-flex p-0 couleur_fond">
+        <div class="row fond_logo">
+
+            <!-- videos -->
+            <div class="col-4 display-inline-block d-none d-lg-block">
+
+                <!-- <img src="#" class="img-fluid" alt="" title=""> -->
+
+                <!-- <video autoplay loop muted class="img-fluid ">
+
+                    <source src="assets\img\videos\pancarte_taco.mp4" type="video/mp4">
+                    <p>Votre navigateur ne prend pas en charge la vidéo.</p>
+
+                </video> -->
+
+            </div>
     
-                    <!-- <img src="#" class="img-fluid" alt="" title=""> -->
-                    <video autoplay loop muted class="img-fluid ">
+            <div class="col-4 display-inline-block d-none d-lg-block position-relative z-2">
+
+                <video autoplay loop muted class="img-fluid">
+
+                    <source src="assets/videos/district_rangement.mp4" type="video/mp4">
+                    <p>Votre navigateur ne prend pas en charge la vidéo.</p>
+
+                </video>                
     
-                        <source src="assets/videos/pancarte_taco.mp4" type="video/mp4">
-                        <p>Votre navigateur ne prend pas en charge la vidéo.</p>
-    
-                    </video>      
-    
-                </div>
-        
-                <div class="col-4 position-relative display-inline-block d-flex p-0 couleur_fond">
-    
-                    <video autoplay loop muted class="img-fluid ">
-    
-                        <source src="assets/videos/cuisinier_feuille.mp4" type="video/mp4">
-                        <p>Votre navigateur ne prend pas en charge la vidéo.</p>
-    
-                    </video>                
-        
-                </div>
-    
-                <div class="col-4 d-flex p-0 couleur_fond">
-    
-                    <!-- <img src="#" class="img-fluid" alt="" title=""> -->
-                    <video autoplay loop muted class="img-fluid ">
-    
-                        <source src="assets/videos/serveur.mp4" type="video/mp4">
-                        <p>Votre navigateur ne prend pas en charge la vidéo.</p>
-    
-                    </video>      
-    
-                </div>
-                   
-                <div class="position-absolute input-group d-flex flex-column align-self-center justify-content-center
-                        w-25 d-none d-lg-block champ_recherche">
+            </div>
+
+            <div class="col-4 display-inline-block d-none d-lg-block">
+
+                <!-- <img src="#" class="img-fluid" alt="" title=""> -->
+
+                <!-- <video autoplay loop muted class="img-fluid ">
+
+                    <source src="assets\img\videos\rangement_(hd_1920_1080_30fps).mp4" type="video/mp4">
+                    <p>Votre navigateur ne prend pas en charge la vidéo.</p>
+
+                </video> -->
+
+            </div>
+
+
+            <!-- barre de recherche dans video -->
+            <!-- <div class="position-absolute input-group d-flex flex-column align-self-center justify-content-center
+                        w-50 d-none d-lg-block champ_recherche">
 
                 <div class="d-flex p-1 ms-2">
 
@@ -119,121 +174,171 @@
 
                 <div id="suggestions" class="fs-4 fw-medium"></div>
                         
-            </div>
-                   
-            </div>
-        
-        </nav>
+            </div> -->
+
+               
+        </div>
+    
+    </nav>
 
 
-        <main class="container-fluid pb-5 bordures_main couleur_fond">
+    <!-- MAIN -->
+    <main class="container-fluid pb-5">
 
-            <div class="row">
+        <!-- carousel mobile -->
+        <div class="fw-medium d-flex justify-content-center position-relative z-1 d-block d-sm-none">
 
-                <div class="col-sm-10 col-lg-5 fs-1 fw-medium ms-lg-3 mt-lg-3 ">
+            <div id="carousel_mobile" class="carousel-fade" data-bs-ride="carousel">
 
-                    <p class="lettres_neon">CONTACT</p>
-            
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active" data-bs-interval="4000">
+
+                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">BIENVENUE</p>
+
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="4000">
+
+                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">WELCOME</p>
+
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="4000">
+
+                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">BIENVENIDA</p>
+
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="4000">
+
+                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">WILLKOMMEN</p>
+
+                    </div>
+
                 </div>
-
-            </div>
-
-            <form class="row m-sm-1 m-lg-5 d-flex justify-content-center">
-            
-                <div class="col-sm-10 col-lg-5 mt-3 mt-lg-0 mb-5">
-            
-                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Nom*" aria-label="First name">
-
-                </div>
-
-                <div class="col-sm-10 col-lg-5 mb-5 ">
                 
-                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Prénom" aria-label="Last name">
-
-                </div>
-
-                <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
-
-                    <input type="email" class="form-control fs-4 border-3 bordures fond_input" placeholder="Email" aria-label="">
-
-                </div>
-
-                <div class="col-sm-10 col-lg-5 mb-4">
-
-                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Téléphone*" aria-label="">
-
-                </div>
-
-                <div class="col-sm-10 col-lg-10 mb-3">
-
-                    <label class="form-label"></label>
-                    <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" placeholder="Votre demande*"></textarea>
-
-                </div>
-
-                <div class="col-sm-12 col-lg-10 fs-5 ms-3">
-
-                    <p class="lettres_noires"><sup>*</sup> Ces champs sont obligatoires</p>
-
-                </div>
-
-                <div class="col-sm-12 col-lg-12 d-flex justify-content-center">
-
-                    <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-3 bouton_envoyer" id="envoi" 
-                            style="width: 10rem; height: 3rem;" type="submit" value="Envoyer">
-
-                </div>
-
-            </form>
-
-        </main>
-
-
-        <footer class="container-fluid bordures_footer couleur_fond">
-
-            <div class="row text-center">
-
-                <div class="col-12 col-lg-12 fs-3 fst-italic fw-medium">
-            
-                    <p class="lettres">Retrouvez nous sur vos réseaux sociaux préférés</p>
+            </div>
         
-                </div>
+        </div>
 
-            </div>
+        <div class="row">
 
-            <div class="row ">
+            <div class="fs-1 fw-medium ms-lg-3 mt-lg-3 text-center">
 
-                <div class="col-7  col-lg-2 offset-5 mx-auto d-flex align-items-center">
-
-                    <a href="https://www.facebook.com/facebook/" class="text-decoration-none">
-                        <img src="assets/images/logo_facebook.png" alt="" title="" style="width: 81%; height : auto"  class="mb-3 shadow-lg">
-                    </a>
-
-                    <a href="https://www.instagram.com/" class="text-decoration-none">
-                        <img src="assets/images/logo_insta.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
-                    </a>
-
-                    <a href="https://twitter.com/" class="text-decoration-none">
-                        <img src="assets/images/logo_x.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
-                    </a>
-
-                    <a href="https://fr.linkedin.com/" class="text-decoration-none">
-                        <img src="assets/images/logo_linkedin.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
-                    </a>
+                <p class="lettres">FORMULAIRE DE CONTACT</p>
             
-                </div>
+            </div>
+
+        </div>
+
+        <form class="row m-sm-1 m-lg-5 d-flex justify-content-center">
+            
+            <div class="col-sm-10 col-lg-5 mt-3 mt-lg-0 mb-5">
+            
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Nom*" aria-label="First name">
 
             </div>
 
-        </footer>
+            <div class="col-sm-10 col-lg-5 mb-5 ">
+                
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Prénom" aria-label="Last name">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
+            </div>
 
-        <script src="assets/js/barre_dynamique.js"></script>
+            <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
 
-    </div>
+                <input type="email" class="form-control fs-4 border-3 bordures fond_input" placeholder="Email" aria-label="">
+
+            </div>
+
+            <div class="col-sm-10 col-lg-5 mb-4">
+
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Téléphone*" aria-label="">
+
+            </div>
+
+            <div class="col-sm-10 col-lg-10 mb-3">
+
+                <label class="form-label"></label>
+
+                <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" placeholder="Votre demande*"></textarea>
+
+            </div>
+
+            <div class="col-sm-12 col-lg-10 fs-5 ms-3">
+
+                <p class="lettres_noires"><sup>*</sup> Ces champs sont obligatoires</p>
+
+            </div>
+
+            <div class="col-sm-12 col-lg-12 d-flex justify-content-center">
+
+                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-3 bouton_envoyer" id="envoi" 
+                        style="width: 10rem; height: 3rem;" type="submit" value="Envoyer">
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bordures_footer fond_logo">
+
+        <!-- phrase reseaux sociaux -->
+        <div class="row text-center">
+
+            <div class="col-12 col-lg-12 fs-3 fst-italic fw-medium">
+            
+                <p class="lettres_blanches d-none d-lg-block">Retrouvez nous sur vos réseaux sociaux préférés</p>
+
+                <p class="lettres_blanches d-block d-sm-none">Retrouvez nous sur les réseaux</p>
+        
+            </div>
+
+        </div>
+
+        <!-- icones reseaux sociaux -->
+        <div class="row ">
+
+            <div class="col-7  col-lg-2 offset-5 mx-auto d-flex align-items-center">
+
+                <a href="https://www.facebook.com/facebook/" class="text-decoration-none">
+                    <img src="assets\img\icones\logo_facebook.png" alt="" title="" style="width: 81%; height : auto"  class="mb-3 shadow-lg">
+                </a>
+
+                <a href="https://www.instagram.com/" class="text-decoration-none">
+                    <img src="assets\img\icones\logo_insta.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                </a>
+
+                <a href="https://twitter.com/" class="text-decoration-none">
+                    <img src="assets\img\icones\logo_x.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                </a>
+
+                <a href="https://fr.linkedin.com/" class="text-decoration-none">
+                    <img src="assets\img\icones\logo_linkedin.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                </a>
+            
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- liens fichiers javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <script src="assets/js/barre_dynamique.js"></script>
+
 
 </body>
 </html>

@@ -32,8 +32,8 @@ fetch('assets/js/the_district.json')
     const categoryTitle = document.getElementById('libelle_categorie');
     categoryTitle.innerHTML = '';
     const categoryTitleElement = document.createElement('h1');
-    categoryTitleElement.className = "col-sm-10 col-lg-4 fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 lettres_neon";
-    categoryTitleElement.innerText = libelle_categorie;
+    categoryTitleElement.className = "fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 lettres text-center";
+    categoryTitleElement.innerText = "CATEGORIE " + libelle_categorie;
     categoryTitle.appendChild(categoryTitleElement);
 
 
