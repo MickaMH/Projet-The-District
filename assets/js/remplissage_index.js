@@ -57,6 +57,22 @@ $(document).ready(function() {
         libelle_plat1.textContent = data1.plat[indexPlat1].libelle;
         libelle_plat1.className = "card-text fs-3 fw-medium ms-3";
 
+        let div_accordion = document.createElement("div");
+        div_accordion.className = "accordion-item";
+
+        let h2_accordion = document.createElement("h2");
+        h2_accordion.className = "accordion-header";
+
+        let button_accordion = document.createElement("button");
+        button_accordion.className = "accordion-button collapsed";
+        button_accordion.textContent = "Lire";
+
+        let div_accordion_collapse = document.createElement("div");
+        div_accordion_collapse.className = "accordion-collapse collapse";
+
+        let div_description = document.createElement("div");
+        div_description.className = "accordion-body";
+
         let description_plat1 = document.createElement("p");
         description_plat1.textContent = data1.plat[indexPlat1].description;
         description_plat1.className = "card-text fst-italic fw-medium ms-3 me-3";
@@ -68,7 +84,11 @@ $(document).ready(function() {
     
         plat_1.append(element_plats1);
         element_plats1.append(panneau_carte_plat1, carte_plat1);
-        carte_plat1.append(image_plat1, libelle_plat1, description_plat1, commander_plat1);
+        carte_plat1.append(image_plat1, libelle_plat1, div_accordion, commander_plat1);
+        div_accordion.append(h2_accordion, div_accordion_collapse);
+        h2_accordion.append(button_accordion);
+        div_accordion_collapse.append(div_description);
+        div_description.append(description_plat1);
 
     });
 
