@@ -20,9 +20,17 @@ $(document).ready(function() {
         libelle_plat.textContent = data2.plat[i].libelle;
         libelle_plat.className = "card-text fs-3 fw-medium ms-3";
   
-        let description_plat = document.createElement("p");
-        description_plat.textContent = data2.plat[i].description;
-        description_plat.className = "card-text fst-italic fw-medium ms-3 me-3";
+        let description_plat = document.createElement("div");
+
+        // Créez un élément de bouton pour activer/désactiver l'accordéon
+        let bouton_accordeon = document.createElement("button");
+        bouton_accordeon.textContent = "Description du plat :";
+        bouton_accordeon.className = "accordion-button collapsed fw-medium ms-3 mb-3 text-decoration-none";
+
+        // Créez un élément de div pour contenir le texte de la description
+        let contenu_accordeon = document.createElement("div");
+        contenu_accordeon.textContent = data2.plat[i].description;
+        contenu_accordeon.className = "collapse ms-3 me-3 mb-3 fw-medium fst-italic";
   
         let commander_plat = document.createElement("a");
         commander_plat.textContent = "Commander";
@@ -33,8 +41,17 @@ $(document).ready(function() {
   
     element_plats.append(carte_plat);
   
-    carte_plat.append(image_plat, libelle_plat, description_plat, commander_plat);}
-  
-});
+    carte_plat.append(image_plat, libelle_plat, description_plat, commander_plat);
 
+    // Ajoutez les éléments au DOM
+    description_plat.appendChild(bouton_accordeon);
+      
+    description_plat.appendChild(contenu_accordeon);
+
+    // Activez l'accordéon lorsque le bouton est cliqué
+    bouton_accordeon.addEventListener("click", function() {
+    contenu_accordeon.classList.toggle("show");
+
+});
+}});
 })

@@ -78,7 +78,6 @@ fetch('assets/js/the_district.json')
     console.error(error);
 
   })});
-
-
   
-    
+
+
