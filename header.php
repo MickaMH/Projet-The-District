@@ -1,3 +1,5 @@
+<?php
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +12,7 @@
             crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/colors.css" type="text/css" media="all">
 
-    <title>Contact</title>
+    <title>Accueil</title>
 </head>
 
 
@@ -55,7 +57,7 @@
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header" aria-current="page" href="index.html">ACCUEIL</a>
+                                        <a class="liens_header_souligne" aria-current="page" href="index.html">ACCUEIL</a>
 
                                     </li>
     
@@ -73,7 +75,7 @@
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header_souligne" aria-current="page" href="contact.html">CONTACT</a>
+                                        <a class="liens_header" aria-current="page" href="contact.html">CONTACT</a>
 
                                     </li>
     
@@ -181,169 +183,4 @@
     
     </nav>
 
-
-    <!-- MAIN -->
-    <main class="container-fluid pb-5">
-
-        <!-- carousel mobile -->
-        <div class="fw-medium d-flex justify-content-center position-relative z-1 d-block d-sm-none">
-
-            <div id="carousel_mobile" class="carousel-fade" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active" data-bs-interval="4000">
-
-                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">BIENVENUE</p>
-
-                    </div>
-
-                    <div class="carousel-item" data-bs-interval="4000">
-
-                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">WELCOME</p>
-
-                    </div>
-
-                    <div class="carousel-item" data-bs-interval="4000">
-
-                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">BIENVENIDA</p>
-
-                    </div>
-
-                    <div class="carousel-item" data-bs-interval="4000">
-
-                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                        <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">WILLKOMMEN</p>
-
-                    </div>
-
-                </div>
-                
-            </div>
-        
-        </div>
-
-        <!-- intitulé main -->
-        <div class="row">
-
-            <div class="fs-1 fw-medium ms-lg-3 mt-lg-3 text-center">
-
-                <p class="lettres">FORMULAIRE DE CONTACT</p>
-            
-            </div>
-
-        </div>
-
-        <!-- formulaire de contact -->
-        <form class="row m-sm-1 m-lg-5 d-flex justify-content-center">
-            
-            <div class="col-sm-10 col-lg-5 mt-3 mt-lg-0 mb-5">
-            
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nom" placeholder="Nom*" aria-label="First name" required>
-                <span id="requisNom"></span>
-            </div>
-
-            <div class="col-sm-10 col-lg-5 mb-5 ">
-                
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" placeholder="Prénom" aria-label="Last name">
-
-            </div>
-
-            <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
-
-                <input type="email" class="form-control fs-4 border-3 bordures fond_input" placeholder="Email" aria-label="">
-
-            </div>
-
-            <div class="col-sm-10 col-lg-5 mb-4">
-
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phone" placeholder="Téléphone*" aria-label=""required>
-                <span id="requisPhone"></span>
-            </div>
-
-            <div class="col-sm-10 col-lg-10 mb-3">
-
-                <label class="form-label"></label>
-
-                <textarea class="form-control fs-4 border-3 bordures fond_input" id="demande" rows="3" placeholder="Votre demande*"></textarea>
-                <span id="requisDemande"></span>
-            </div>
-
-            <div class="col-sm-12 col-lg-10 fs-5 ms-3">
-
-                <p class="lettres_noires"><sup>*</sup> Ces champs sont obligatoires</p>
-
-            </div>
-
-            <!-- bouton envoyer -->
-            <div class="col-sm-12 col-lg-12 d-flex justify-content-center">
-
-                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-4 bouton_envoyer" id="envoi" 
-                        style="width: 10rem; height: 3rem;" type="submit" value="Envoyer">
-
-            </div>
-
-        </form>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="container-fluid bordures_footer fond_logo">
-
-        <!-- phrase reseaux sociaux -->
-        <div class="row text-center">
-
-            <div class="col-12 col-lg-12 fs-3 fst-italic fw-medium">
-            
-                <p class="lettres_blanches d-none d-lg-block">Retrouvez nous sur vos réseaux sociaux préférés</p>
-
-                <p class="lettres_blanches d-block d-sm-none">Retrouvez nous sur les réseaux</p>
-        
-            </div>
-
-        </div>
-
-        <!-- icones reseaux sociaux -->
-        <div class="row ">
-
-            <div class="col-7  col-lg-2 offset-5 mx-auto d-flex align-items-center">
-
-                <a href="https://www.facebook.com/facebook/" class="text-decoration-none">
-                    <img src="assets/img/icones/logo_facebook.png" alt="" title="" style="width: 81%; height : auto"  class="mb-3 shadow-lg">
-                </a>
-
-                <a href="https://www.instagram.com/" class="text-decoration-none">
-                    <img src="assets/img/icones/logo_insta.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
-                </a>
-
-                <a href="https://twitter.com/" class="text-decoration-none">
-                    <img src="assets/img/icones/logo_x.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
-                </a>
-
-                <a href="https://fr.linkedin.com/" class="text-decoration-none">
-                    <img src="assets/img/icones/logo_linkedin.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
-                </a>
-            
-            </div>
-
-        </div>
-
-    </footer>
-
-
-    <!-- liens fichiers javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-
-    <script src="assets/js/barre_dynamique.js"></script>
-
-    <script src="assets/js/validation_contact.js"></script>
-
-
-</body>
-</html>
+?>

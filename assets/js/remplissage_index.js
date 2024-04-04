@@ -64,7 +64,7 @@ $(document).ready(function() {
     
       // Créez un élément de bouton pour activer/désactiver l'accordéon
       let bouton_accordeon = document.createElement("button");
-      bouton_accordeon.textContent = "Description du plat :";
+      bouton_accordeon.textContent = "Description du plat \u25bc";
       bouton_accordeon.className = "accordion-button collapsed fw-medium ms-3 mb-3 text-decoration-none";
     
       // Créez un élément de div pour contenir le texte de la description
@@ -125,7 +125,7 @@ $(document).ready(function() {
     
       // Créez un élément de bouton pour activer/désactiver l'accordéon
       let bouton_accordeon = document.createElement("button");
-      bouton_accordeon.textContent = "Description du plat :";
+      bouton_accordeon.textContent = "Description du plat \u25bc";
       bouton_accordeon.className = "accordion-button collapsed fw-medium ms-3 mb-3 text-decoration-none";
     
       // Créez un élément de div pour contenir le texte de la description
@@ -217,7 +217,7 @@ $(document).ready(function() {
     
       // Créez un élément de bouton pour activer/désactiver l'accordéon
       let bouton_accordeon = document.createElement("button");
-      bouton_accordeon.textContent = "Description du plat :";
+      bouton_accordeon.textContent = "Description du plat \u25bc";
       bouton_accordeon.className = "accordion-button collapsed fw-medium ms-3 mb-3 text-decoration-none";
     
       // Créez un élément de div pour contenir le texte de la description
@@ -274,7 +274,7 @@ $(document).ready(function() {
     
       // Créez un élément de bouton pour activer/désactiver l'accordéon
       let bouton_accordeon = document.createElement("button");
-      bouton_accordeon.textContent = "Description du plat :";
+      bouton_accordeon.textContent = "Description du plat \u25bc";
       bouton_accordeon.className = "accordion-button collapsed fw-medium ms-3 mb-3 text-decoration-none";
     
       // Créez un élément de div pour contenir le texte de la description
