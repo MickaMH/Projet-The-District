@@ -1,5 +1,3 @@
-<?php
-   
    <!-- FOOTER -->
    <footer class="container-fluid bordures_footer fond_logo">
 
@@ -44,20 +42,34 @@
    </footer>
 
 
-   <!-- liens fichiers javascript -->
+   <!-- liens javascript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
            crossorigin="anonymous"></script>
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+   <!-- mes fichiers javascript -->
    <script src="assets/js/barre_dynamique.js"></script>
 
    <script src="assets/js/remplissage_index.js"></script>
+
+   <script src="assets/js/remplissage_categories.js"></script>
+
+   <script src="assets/js/remplissage_plats.js"></script>
+
+   <script src="assets/js/remplissage_plats_par_categorie.js"></script>
+
+   <script src="assets/js/remplissage_commande.js"></script>
+
+  <!--  <script src="assets/js/validation_commande.js"></script> -->
+
+   <!-- <script src="assets/js/validation_contact.js"></script> -->
+   <script src="assets/js/validation_formulaires.js"></script>
 
    
 </body>
 </html>
 
-?>
+
 

@@ -1,4 +1,4 @@
-let formulaireValide = document.getElementById("envoi_commande");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
+let formulaireValide = document.getElementById("envoi");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
 
 let nom = document.getElementById("nom");               /*Variable qui prend la valeur de l'Input Text Nom*/
 let nomVerif = /^[a-zA-Z][a-zA-Z' -]{1,50}$/;            /*Vérifie 1 lettre Min ou Maj, puis lettres Min ou Maj ou apostrophe ou trait d'union*/
@@ -14,7 +14,10 @@ let phone = document.getElementById("phone");
 let phoneVerif = /^[0-9]{10}$/;
                                                                                     
 let adresse = document.getElementById("adresse");                 
-let adresseVerif =  /^(\d+\s*(?:bis|ter)?\s+[a-zA-Z,\. ]+)\s+(\d{5})\s+([a-zA-Z]+)$/;                            
+let adresseVerif =  /^(\d+\s*(?:bis|ter)?\s+[a-zA-Z,\. ]+)\s+(\d{5})\s+([a-zA-Z]+)$/;   
+
+let demande = document.getElementById("demande");                 
+let demandeVerif =  /^[a-zA-Z0-9,'-?!: .]{1,300}$/;                             
 
 
 
@@ -27,6 +30,8 @@ let requisMail = document.getElementById("requisMail");
 let requisPhone = document.getElementById("requisPhone"); 
 
 let requisAdresse = document.getElementById("requisAdresse");
+
+let requisDemande = document.getElementById("requisDemande");
 
 
 
@@ -217,6 +222,43 @@ let requisAdresse = document.getElementById("requisAdresse");
                     requisAdresse.style.fontFamily = "helvetica";
                     requisAdresse.style.fontWeight = "normal";
                     adresse.style.borderColor = "#980848";
+                }
+
+                
+                                  /*DEMANDE (demande)*/
+
+
+                if (demande.validity.valueMissing)                 
+                {
+                    event.preventDefault();
+                    requisDemande.textContent = "\u26a0 Ce champ est obligatoire";
+                    requisDemande.style.fontSize = "1.2rem";
+                    requisDemande.style.color = "red";
+                    requisDemande.style.fontWeight = "normal";
+                    requisDemande.style.fontFamily = "helvetica";
+                    demande.style.borderColor = "red";
+                }
+
+                else if (demandeVerif.test(demande.value) == false)                                  
+                {
+                    event.preventDefault();
+                    requisDemande.textContent = "\u26a0 Vérifiez l'orthographe";
+                    requisDemande.style.fontSize = "1.2rem";
+                    requisDemande.style.color = "orange";
+                    requisDemande.style.fontWeight = "normal";
+                    requisDemande.style.fontFamily = "helvetica";
+                    demande.style.borderColor = "orange";
+                    demande.placeholder= "Caractères autorisés: (a-A , 0-9 ,': ,.?!)";
+                }
+
+                else
+                {
+                    requisDemande.textContent = "\u2713";
+                    requisDemande.style.fontSize = "1.2rem";
+                    requisDemande.style.color = "green";
+                    requisDemande.style.fontFamily = "helvetica";
+                    requisDemande.style.fontWeight = "normal";
+                    demande.style.borderColor = "#980848";
                 }
 
 }                                                               

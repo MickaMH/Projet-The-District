@@ -1,4 +1,5 @@
-let formulaireValide = document.getElementById("envoi");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
+let formulaireValide = document.getElementById("envoi_contact");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
+
 
 let nom = document.getElementById("nom");               /*Variable qui prend la valeur de l'Input Text Nom*/
 let nomVerif = /^[a-zA-Z][a-zA-Z' -]{1,50}$/;            /*Vérifie 1 lettre Min ou Maj, puis lettres Min ou Maj ou apostrophe ou trait d'union*/
@@ -15,7 +16,6 @@ let requisNom = document.getElementById("requisNom");           /*Variables pour
 let requisPhone = document.getElementById("requisPhone"); 
 
 let requisDemande = document.getElementById("requisDemande");
-
 
 
         formulaireValide.addEventListener("click", validation);     /*Evènement pour la "validation" du Formulaire lors du "click"*/

@@ -35,7 +35,7 @@ $(document).ready(function() {
         let commander_plat = document.createElement("a");
         commander_plat.textContent = "Commander";
         commander_plat.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-        commander_plat.href = "commande.html?id=" + data2.plat[i].id_plat;
+        commander_plat.href = "commande.php?id=" + data2.plat[i].id_plat;
   
     plats.append(element_plats);
   

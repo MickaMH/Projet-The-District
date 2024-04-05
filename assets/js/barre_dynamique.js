@@ -38,7 +38,7 @@ fetch("assets/js/the_district.json")
           libelle.textContent = plat.libelle;
           libelle.className = "ms-1 text-decoration-none";
           libelle.style = "color: black";
-          libelle.href = "commande.html?id=" + plat.id_plat;
+          libelle.href = "commande.php?id=" + plat.id_plat;
 
           li.append(img, libelle);
           resultats_recherche.appendChild(li);

@@ -61,7 +61,7 @@ fetch('assets/js/the_district.json')
     const commander_plat = document.createElement("a");
     commander_plat.textContent = "Commander";
     commander_plat.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-    commander_plat.href = "commande.html?id=" + plate.id_plat;
+    commander_plat.href = "commande.php?id=" + plate.id_plat;
 
     div.appendChild(element_plat);
   

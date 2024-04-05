@@ -1,5 +1,3 @@
-<?php
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -57,25 +55,25 @@
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header_souligne" aria-current="page" href="index.html">ACCUEIL</a>
+                                        <a class="liens_header" aria-current="page" href="index.php">ACCUEIL</a>
 
                                     </li>
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header" aria-current="page" href="categories.html">CATEGORIES</a>
+                                        <a class="liens_header" aria-current="page" href="categories.php">CATEGORIES</a>
 
                                     </li>
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header" aria-current="page" href="plats.html">PLATS</a>
+                                        <a class="liens_header" aria-current="page" href="plats.php">PLATS</a>
 
                                     </li>
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header" aria-current="page" href="contact.html">CONTACT</a>
+                                        <a class="liens_header" aria-current="page" href="contact.php">CONTACT</a>
 
                                     </li>
     
@@ -183,4 +181,3 @@
     
     </nav>
 
-?>
