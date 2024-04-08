@@ -60,45 +60,45 @@
         </div>
 
         <!-- formulaire de contact -->
-        <form class="row m-sm-1 m-lg-5 d-flex justify-content-center">
+        <form action="/contact_traitement.php" method="POST" name="formulaire_contact" id="document_contact" enctype="multipart/form-data" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
             <div class="col-sm-10 col-lg-5 mt-3 mt-lg-0 mb-5">
             
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nom" placeholder="Nom*" aria-label="First name" required>
-                <span id="requisNom"></span>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nomContact" placeholder="Nom*" aria-label="First name" required>
+                <span id="requisNomContact"></span>
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-5 ">
                 
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="prenom" placeholder="Prénom" aria-label="Last name" required>
-                <span id="requisPrenom"></span>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="prenom" placeholder="Prénom" aria-label="Last name">
+                <!-- <span id="requisPrenom"></span> -->
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
 
-                <input type="email" class="form-control fs-4 border-3 bordures fond_input" id="mail" placeholder="Email" aria-label="" required>
-                <span id="requisMail"></span>
+                <input type="email" class="form-control fs-4 border-3 bordures fond_input" id="mail" placeholder="Email" aria-label="Email">
+                <!-- <span id="requisMail"></span> -->
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-4">
 
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phone" placeholder="Téléphone*" aria-label="Phone" required>
-                <span id="requisPhone"></span>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phoneContact" placeholder="Téléphone*" aria-label="Phone" required>
+                <span id="requisPhoneContact"></span>
             </div>
 
-            <div class="col-sm-10 col-lg-10 mb-3 d-none">
+           <!--  <div class="col-sm-10 col-lg-10 mb-3 d-none">
 
                 <label class="form-label"></label>
                 <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" id="adresse" placeholder="Votre adresse*" required></textarea>
                 <span id="requisAdresse"></span>
 
-            </div>
+            </div> -->
 
             <div class="col-sm-10 col-lg-10 mb-3">
 
                 <label class="form-label"></label>
-                <textarea type="text" class="form-control fs-4 border-3 bordures fond_input" id="demande" rows="3" placeholder="Votre demande*" aria-label="Demand" required></textarea>
-                <span id="requisDemande"></span>
+                <textarea type="text" class="form-control fs-4 border-3 bordures fond_input" id="demandeContact" rows="3" placeholder="Votre demande*" aria-label="Demand" required></textarea>
+                <span id="requisDemandeContact"></span>
             </div>
 
             <div class="col-sm-12 col-lg-10 fs-5 ms-3">
@@ -110,7 +110,7 @@
             <!-- bouton envoyer -->
             <div class="col-sm-12 col-lg-12 d-flex justify-content-center">
 
-                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-4 bouton_envoyer" id="envoi" 
+                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-4 bouton_envoyer" id="envoi_contact" 
                         style="width: 10rem; height: 3rem;" type="submit" value="Envoyer">
 
             </div>

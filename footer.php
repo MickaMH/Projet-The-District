@@ -62,10 +62,9 @@
 
    <script src="assets/js/remplissage_commande.js"></script>
 
-  <!--  <script src="assets/js/validation_commande.js"></script> -->
+    <script src="assets/js/validation_commande.js"></script>
 
-   <!-- <script src="assets/js/validation_contact.js"></script> -->
-   <script src="assets/js/validation_formulaires.js"></script>
+   <script src="assets/js/validation_contact.js"></script>
 
    
 </body>

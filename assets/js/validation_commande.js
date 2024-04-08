@@ -1,4 +1,4 @@
-let formulaireValide = document.getElementById("envoi_commande");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
+let formulaireCommandeValide = document.getElementById("envoi_commande");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
 
 let nom = document.getElementById("nom");               /*Variable qui prend la valeur de l'Input Text Nom*/
 let nomVerif = /^[a-zA-Z][a-zA-Z' -]{1,50}$/;            /*Vérifie 1 lettre Min ou Maj, puis lettres Min ou Maj ou apostrophe ou trait d'union*/
@@ -30,9 +30,9 @@ let requisAdresse = document.getElementById("requisAdresse");
 
 
 
-        formulaireValide.addEventListener("click", validation);     /*Evènement pour la "validation" du Formulaire lors du "click"*/
+        formulaireCommandeValide.addEventListener("click", validationCommande);     /*Evènement pour la "validation" du Formulaire lors du "click"*/
             
-            function validation(event)                              /*Fonction qui gère la "validation" de l'évènement (event)*/
+            function validationCommande(event)                              /*Fonction qui gère la "validation" de l'évènement (event)*/
            
                 
                                  /*NOM (nom)*/   

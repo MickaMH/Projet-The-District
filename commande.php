@@ -171,7 +171,7 @@
             <!-- bouton commander -->
             <div class="col-sm-12 col-lg-12 d-flex justify-content-center">
                 
-                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-4 bouton_envoyer" id="envoi" 
+                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-4 bouton_envoyer" id="envoi_commande" 
                 style="width: 10rem; height: 3rem;" type="submit" value="Commander">
 
             </div>

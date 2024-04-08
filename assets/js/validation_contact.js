@@ -1,136 +1,136 @@
-let formulaireValide = document.getElementById("envoi_contact");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
+let formulaireContactValide = document.getElementById("envoi_contact");/*Variable Input Submit pour validation du formulaire lors de l'envoi*/
 
 
-let nom = document.getElementById("nom");               /*Variable qui prend la valeur de l'Input Text Nom*/
-let nomVerif = /^[a-zA-Z][a-zA-Z' -]{1,50}$/;            /*Vérifie 1 lettre Min ou Maj, puis lettres Min ou Maj ou apostrophe ou trait d'union*/
+let nomContact = document.getElementById("nomContact");               /*Variable qui prend la valeur de l'Input Text Nom*/
+let nomVerifContact = /^[a-zA-Z][a-zA-Z' -]{1,50}$/;            /*Vérifie 1 lettre Min ou Maj, puis lettres Min ou Maj ou apostrophe ou trait d'union*/
 
-let phone = document.getElementById("phone");             
-let phoneVerif = /^[0-9]{10}$/;
+let phoneContact = document.getElementById("phoneContact");             
+let phoneVerifContact = /^[0-9]{10}$/;
                                                                                     
-let demande = document.getElementById("demande");                 
-let demandeVerif =  /^[a-zA-Z0-9,'-?!: .]{1,300}$/;                             
+let demandeContact = document.getElementById("demandeContact");                 
+let demandeVerifContact =  /^[a-zA-Z0-9,'-?!: .]{1,300}$/;                             
 
 
-let requisNom = document.getElementById("requisNom");           /*Variables pour Message d'erreur ou Valide*/
+let requisNomContact = document.getElementById("requisNomContact");           /*Variables pour Message d'erreur ou Valide*/
 
-let requisPhone = document.getElementById("requisPhone"); 
+let requisPhoneContact = document.getElementById("requisPhoneContact"); 
 
-let requisDemande = document.getElementById("requisDemande");
+let requisDemandeContact = document.getElementById("requisDemandeContact");
 
 
-        formulaireValide.addEventListener("click", validation);     /*Evènement pour la "validation" du Formulaire lors du "click"*/
+        formulaireContactValide.addEventListener("click", validationContact);     /*Evènement pour la "validation" du Formulaire lors du "click"*/
             
-            function validation(event)                              /*Fonction qui gère la "validation" de l'évènement (event)*/
+            function validationContact(event)                              /*Fonction qui gère la "validation" de l'évènement (event)*/
            
                 
                                  /*NOM (nom)*/   
 
 {
-                if (nom.validity.valueMissing)                              /*Si "valeur" du champ "nom" est vide*/
+                if (nomContact.validity.valueMissing)                              /*Si "valeur" du champ "nom" est vide*/
                 {
                     event.preventDefault();                                 /*Bloque l'envoi du Formulaire*/
-                    requisNom.textContent = "\u26a0 Ce champ est obligatoire";     /*Affiche message d'erreur*/
-                    requisNom.style.fontSize = "1.2rem";                      /*Taille de police du message d'erreur*/
-                    requisNom.style.fontWeight = "normal";
-                    requisNom.style.color = "red";                              /*Couleur de police du message d'erreur*/ 
-                    requisNom.style.fontFamily = "helvetica";  
-                    nom.style.borderColor = "red";         
+                    requisNomContact.textContent = "\u26a0 Ce champ est obligatoire";     /*Affiche message d'erreur*/
+                    requisNomContact.style.fontSize = "1.2rem";                      /*Taille de police du message d'erreur*/
+                    requisNomContact.style.fontWeight = "normal";
+                    requisNomContact.style.color = "red";                              /*Couleur de police du message d'erreur*/ 
+                    requisNomContact.style.fontFamily = "helvetica";  
+                    nomContact.style.borderColor = "red";         
                 }
 
-                else if (nomVerif.test(nom.value) == false)                 /*Sinon si "valeur" du champ "nom" différent du Format prévu (nomVerif)*/
+                else if (nomVerifContact.test(nomContact.value) == false)                 /*Sinon si "valeur" du champ "nom" différent du Format prévu (nomVerif)*/
                 {                
                     event.preventDefault();                                                 /*Bloque l'envoi du Formulaire*/
-                    requisNom.textContent = "\u26a0 Vérifiez l'orthographe du nom";   /*Affiche message d'erreur*/
-                    requisNom.style.fontSize = "1.2rem";                                    /*Taille de police du message d'erreur*/
-                    requisNom.style.fontWeight = "normal";
-                    requisNom.style.color = "orange";                                       /*Couleur de police du message d'erreur*/           
-                    requisNom.style.fontFamily = "helvetica";
-                    nom.style.borderColor = "orange";
-                    nom.placeholder= "sans accents";
+                    requisNomContact.textContent = "\u26a0 Vérifiez l'orthographe du nom";   /*Affiche message d'erreur*/
+                    requisNomContact.style.fontSize = "1.2rem";                                    /*Taille de police du message d'erreur*/
+                    requisNomContact.style.fontWeight = "normal";
+                    requisNomContact.style.color = "orange";                                       /*Couleur de police du message d'erreur*/           
+                    requisNomContact.style.fontFamily = "helvetica";
+                    nomContact.style.borderColor = "orange";
+                    nomContact.placeholder= "sans accents";
                 }
 
                 else                                                        /*Sinon "NOM" valide*/
                 {
-                    requisNom.textContent = "\u2713";                       /*Affiche une Coche*/ 
-                    requisNom.style.fontSize = "1.2rem";                      /*Taille de police de la Coche*/
-                    requisNom.style.color = "green";                        /*Couleur de la Coche*/
-                    requisNom.style.fontFamily = "helvetica";
-                    requisNom.style.fontWeight = "normal";
-                    nom.style.borderColor = "#980848";
+                    requisNomContact.textContent = "\u2713";                       /*Affiche une Coche*/ 
+                    requisNomContact.style.fontSize = "1.2rem";                      /*Taille de police de la Coche*/
+                    requisNomContact.style.color = "green";                        /*Couleur de la Coche*/
+                    requisNomContact.style.fontFamily = "helvetica";
+                    requisNomContact.style.fontWeight = "normal";
+                    nomContact.style.borderColor = "#980848";
                 }
 
                               
                                 /*TELEPHONE (phone)*/
 
 
-                if (phone.validity.valueMissing)                 
+                if (phoneContact.validity.valueMissing)                 
                 {
                     event.preventDefault();
-                    requisPhone.textContent = "\u26a0 Ce champ est obligatoire";
-                    requisPhone.style.fontSize = "1.2rem";
-                    requisPhone.style.fontWeight = "normal";
-                    requisPhone.style.color = "red";
-                    requisPhone.style.fontFamily = "helvetica";
-                    phone.style.borderColor = "red";
+                    requisPhoneContact.textContent = "\u26a0 Ce champ est obligatoire";
+                    requisPhoneContact.style.fontSize = "1.2rem";
+                    requisPhoneContact.style.fontWeight = "normal";
+                    requisPhoneContact.style.color = "red";
+                    requisPhoneContact.style.fontFamily = "helvetica";
+                    phoneContact.style.borderColor = "red";
                 }
 
-                else if (phoneVerif.test(phone.value) == false)                                      
+                else if (phoneVerifContact.test(phoneContact.value) == false)                                      
                 {
                     event.preventDefault();
-                    requisPhone.textContent = "\u26a0 Ce numéro n'est pas correct";
-                    requisPhone.style.fontSize = "1.2rem";
-                    requisPhone.style.color = "orange";
-                    requisPhone.style.fontWeight = "normal";
-                    requisPhone.style.fontFamily = "helvetica";
-                    phone.style.borderColor = "orange";
-                    phone.placeholder= "ex: 0123456789";
+                    requisPhoneContact.textContent = "\u26a0 Ce numéro n'est pas correct";
+                    requisPhoneContact.style.fontSize = "1.2rem";
+                    requisPhoneContact.style.color = "orange";
+                    requisPhoneContact.style.fontWeight = "normal";
+                    requisPhoneContact.style.fontFamily = "helvetica";
+                    phoneContact.style.borderColor = "orange";
+                    phoneContact.placeholder= "ex: 0123456789";
                 }
 
                 else
                 {
-                    requisPhone.textContent = "\u2713";
-                    requisPhone.style.fontSize = "1.2rem";
-                    requisPhone.style.color = "green";
-                    requisPhone.style.fontFamily = "helvetica";
-                    requisPhone.style.fontWeight = "normal";
-                    phone.style.borderColor = "#980848";
+                    requisPhoneContact.textContent = "\u2713";
+                    requisPhoneContact.style.fontSize = "1.2rem";
+                    requisPhoneContact.style.color = "green";
+                    requisPhoneContact.style.fontFamily = "helvetica";
+                    requisPhoneContact.style.fontWeight = "normal";
+                    phoneContact.style.borderColor = "#980848";
                 }
 
                 
                                 /*DEMANDE (demande)*/
 
 
-                if (demande.validity.valueMissing)                 
+                if (demandeContact.validity.valueMissing)                 
                 {
                     event.preventDefault();
-                    requisDemande.textContent = "\u26a0 Ce champ est obligatoire";
-                    requisDemande.style.fontSize = "1.2rem";
-                    requisDemande.style.color = "red";
-                    requisDemande.style.fontWeight = "normal";
-                    requisDemande.style.fontFamily = "helvetica";
-                    demande.style.borderColor = "red";
+                    requisDemandeContact.textContent = "\u26a0 Ce champ est obligatoire";
+                    requisDemandeContact.style.fontSize = "1.2rem";
+                    requisDemandeContact.style.color = "red";
+                    requisDemandeContact.style.fontWeight = "normal";
+                    requisDemandeContact.style.fontFamily = "helvetica";
+                    demandeContact.style.borderColor = "red";
                 }
 
-                else if (demandeVerif.test(demande.value) == false)                                  
+                else if (demandeVerifContact.test(demandeContact.value) == false)                                  
                 {
                     event.preventDefault();
-                    requisDemande.textContent = "\u26a0 Vérifiez l'orthographe";
-                    requisDemande.style.fontSize = "1.2rem";
-                    requisDemande.style.color = "orange";
-                    requisDemande.style.fontWeight = "normal";
-                    requisDemande.style.fontFamily = "helvetica";
-                    demande.style.borderColor = "orange";
-                    demande.placeholder= "Caractères autorisés: (a-A , 0-9 ,': ,.?!)";
+                    requisDemandeContact.textContent = "\u26a0 Vérifiez l'orthographe";
+                    requisDemandeContact.style.fontSize = "1.2rem";
+                    requisDemandeContact.style.color = "orange";
+                    requisDemandeContact.style.fontWeight = "normal";
+                    requisDemandeContact.style.fontFamily = "helvetica";
+                    demandeContact.style.borderColor = "orange";
+                    demandeContact.placeholder= "Caractères autorisés: (a-A , 0-9 ,': ,.?!)";
                 }
 
                 else
                 {
-                    requisDemande.textContent = "\u2713";
-                    requisDemande.style.fontSize = "1.2rem";
-                    requisDemande.style.color = "green";
-                    requisDemande.style.fontFamily = "helvetica";
-                    requisDemande.style.fontWeight = "normal";
-                    demande.style.borderColor = "#980848";
+                    requisDemandeContact.textContent = "\u2713";
+                    requisDemandeContact.style.fontSize = "1.2rem";
+                    requisDemandeContact.style.color = "green";
+                    requisDemandeContact.style.fontFamily = "helvetica";
+                    requisDemandeContact.style.fontWeight = "normal";
+                    demandeContact.style.borderColor = "#980848";
                 }
 
 }                                                               
