@@ -60,11 +60,11 @@
         </div>
 
         <!-- formulaire de contact -->
-        <form action="/contact_traitement.php" method="POST" name="formulaire_contact" id="document_contact" enctype="multipart/form-data" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
+        <form action="contact_traitement.php" method="POST" name="formulaire_contact" id="document_contact" enctype="multipart/form-data" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
             <div class="col-sm-10 col-lg-5 mt-3 mt-lg-0 mb-5">
             
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nomContact" placeholder="Nom*" aria-label="First name" required>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nomContact" name="nomContact" placeholder="Nom*" aria-label="First name" required>
                 <span id="requisNomContact"></span>
             </div>
 
@@ -82,7 +82,7 @@
 
             <div class="col-sm-10 col-lg-5 mb-4">
 
-                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phoneContact" placeholder="Téléphone*" aria-label="Phone" required>
+                <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phoneContact" name="phoneContact" placeholder="Téléphone*" aria-label="Phone" required>
                 <span id="requisPhoneContact"></span>
             </div>
 
@@ -97,7 +97,7 @@
             <div class="col-sm-10 col-lg-10 mb-3">
 
                 <label class="form-label"></label>
-                <textarea type="text" class="form-control fs-4 border-3 bordures fond_input" id="demandeContact" rows="3" placeholder="Votre demande*" aria-label="Demand" required></textarea>
+                <textarea type="text" class="form-control fs-4 border-3 bordures fond_input" id="demandeContact" name="demandeContact" rows="3" placeholder="Votre demande*" aria-label="Demand" required></textarea>
                 <span id="requisDemandeContact"></span>
             </div>
 

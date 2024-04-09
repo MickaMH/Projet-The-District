@@ -7,7 +7,7 @@ $(document).ready(function() {
         for (i=0; i<data.categorie.length; i++) {
     
             let element = document.createElement("div");
-            element.className="mb-3 mt-3 mb-lg-5 mt-lg-5";
+            element.className="p-lg-5 pb-lg-0 mb-3 mt-3";
     
             let carte_categorie = document.createElement("div");
             carte_categorie.className = "card w-100 border-4 bordures rounded-5 ";

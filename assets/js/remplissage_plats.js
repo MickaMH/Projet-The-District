@@ -7,7 +7,7 @@ $(document).ready(function() {
         for (i=0; i<data2.plat.length; i++) {
   
         let element_plats = document.createElement("div");
-        element_plats.className="col-lg-4 p-lg-5 pb-lg-0 mb-3 mt-3";
+        element_plats.className="p-lg-5 pb-lg-0 mb-3 mt-3";
   
         let carte_plat = document.createElement("div");
         carte_plat.className = "card w-100 border-4 bordures rounded-5 ";
