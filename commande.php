@@ -70,11 +70,11 @@
 
                     <div class="card-body p-3">
 
-                        <div id="libelle_description_commande_verticale"></div>
+                        <div id="libelle_description_commande_verticale" ></div>
 
                         <div class="d-flex">
 
-                            <label class="fs-5 fw-medium me-2">Prix :</label><div id="prix_commande_verticale"></div><p class="fs-5 fw-medium ms-2">euros</p>
+                            <label class="fs-5 fw-medium me-2">Prix :</label><div id="prix_commande_verticale" ></div><p class="fs-5 fw-medium ms-2">euros</p>
                         
                         </div>
 
@@ -100,11 +100,11 @@
 
                     <div class="card-body p-3">
 
-                            <div id="libelle_description_commande_horizontale"></div>
+                            <div id="libelle_description_commande_horizontale" name="libelleCommande" required></div>
 
                             <div class="d-flex">
 
-                                <label class="fs-5 fw-medium me-2">Prix :</label><div id="prix_commande_horizontale"></div><p class="fs-5 fw-medium ms-2">euros</p>
+                                <label class="fs-5 fw-medium me-2">Prix :</label><div id="prix_commande_horizontale" name="prixCommande" required></div><p class="fs-5 fw-medium ms-2">euros</p>
                             
                             </div>
 
@@ -126,32 +126,32 @@
         <div class="row d-flex justify-content-center">
 
             <!-- formulaire de commande -->
-            <form action="#" method="POST" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
+            <form action="traitement_commande.php" method="POST" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
                 <div class="col-sm-10 col-lg-5 mb-5 mt-3 mt-lg-0">
 
-                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nom" placeholder="Nom*(sans accents)" required>
+                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="nom" name="nomCommande" placeholder="Nom*(sans accents)" required>
                     <span id="requisNom"></span>
 
                 </div>
 
                 <div class="col-sm-10 col-lg-5 mb-5">
                 
-                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="prenom" placeholder="Prénom*(sans accents)" required>
+                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="prenom" name="prenomCommande" placeholder="Prénom*(sans accents)" required>
                     <span id="requisPrenom"></span>
 
                 </div>
 
                 <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
 
-                    <input type="email" class="form-control fs-4 border-3 bordures fond_input" id="mail" placeholder="Email*" required>
+                    <input type="email" class="form-control fs-4 border-3 bordures fond_input" id="mail" name="mailCommande" placeholder="Email*" required>
                     <span id="requisMail"></span>
 
                 </div>
 
                 <div class="col-sm-10 col-lg-5 mb-4">
 
-                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phone" placeholder="Téléphone*" required>
+                    <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="phone" name="phoneCommande" placeholder="Téléphone*" required>
                     <span id="requisPhone"></span>
 
                 </div>
@@ -159,7 +159,7 @@
                 <div class="col-sm-10 col-lg-10 mb-3">
 
                     <label class="form-label"></label>
-                    <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" id="adresse" placeholder="Votre adresse*" required></textarea>
+                    <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" id="adresse" name="adresseCommande" placeholder="Votre adresse*" required></textarea>
                     <span id="requisAdresse"></span>
 
                 </div>

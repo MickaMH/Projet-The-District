@@ -1,5 +1,6 @@
 /*CARTE HORIZONTALE*/
 
+
 // Fetch the JSON file
 fetch('assets/js/the_district.json')
 

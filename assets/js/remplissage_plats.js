@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    $.getJSON("assets/js/the_district.json", function(data2) {
+    $.getJSON("assets/js/the_district.json", function(data_plats) {
 
         let plats = $("#plats");
   
-        for (i=0; i<data2.plat.length; i++) {
+        for (i=0; i<data_plats.plat.length; i++) {
   
         let element_plats = document.createElement("div");
         element_plats.className="p-lg-5 pb-lg-0 mb-3 mt-3";
@@ -13,11 +13,11 @@ $(document).ready(function() {
         carte_plat.className = "card w-100 border-4 bordures rounded-5 ";
   
         let image_plat = document.createElement("img");
-        image_plat.src = data2.plat[i].image;
+        image_plat.src = data_plats.plat[i].image;
         image_plat.className = "card-img-top p-3 rounded-5";
   
         let libelle_plat = document.createElement("h5");
-        libelle_plat.textContent = data2.plat[i].libelle;
+        libelle_plat.textContent = data_plats.plat[i].libelle;
         libelle_plat.className = "card-text fs-3 fw-medium ms-3";
   
         let description_plat = document.createElement("div");
@@ -29,13 +29,13 @@ $(document).ready(function() {
 
         // Créez un élément de div pour contenir le texte de la description
         let contenu_accordeon = document.createElement("div");
-        contenu_accordeon.textContent = data2.plat[i].description;
+        contenu_accordeon.textContent = data_plats.plat[i].description;
         contenu_accordeon.className = "collapse ms-3 me-3 mb-3 fw-medium fst-italic";
   
         let commander_plat = document.createElement("a");
         commander_plat.textContent = "Commander";
         commander_plat.className = "card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches";
-        commander_plat.href = "commande.php?id=" + data2.plat[i].id_plat;
+        commander_plat.href = "commande.php?id=" + data_plats.plat[i].id_plat;
   
     plats.append(element_plats);
   

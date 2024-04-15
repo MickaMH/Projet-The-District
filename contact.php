@@ -60,7 +60,7 @@
         </div>
 
         <!-- formulaire de contact -->
-        <form action="contact_traitement.php" method="POST" name="formulaire_contact" id="document_contact" enctype="multipart/form-data" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
+        <form action="traitement_contact.php" method="POST" name="formulaire_contact" id="document_contact" enctype="multipart/form-data" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
             <div class="col-sm-10 col-lg-5 mt-3 mt-lg-0 mb-5">
             
@@ -71,13 +71,13 @@
             <div class="col-sm-10 col-lg-5 mb-5 ">
                 
                 <input type="text" class="form-control fs-4 border-3 bordures fond_input" id="prenom" placeholder="Prénom" aria-label="Last name">
-                <!-- <span id="requisPrenom"></span> -->
+                
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-5 mb-lg-4">
 
                 <input type="email" class="form-control fs-4 border-3 bordures fond_input" id="mail" placeholder="Email" aria-label="Email">
-                <!-- <span id="requisMail"></span> -->
+        
             </div>
 
             <div class="col-sm-10 col-lg-5 mb-4">
@@ -86,13 +86,7 @@
                 <span id="requisPhoneContact"></span>
             </div>
 
-           <!--  <div class="col-sm-10 col-lg-10 mb-3 d-none">
-
-                <label class="form-label"></label>
-                <textarea class="form-control fs-4 border-3 bordures fond_input" rows="3" id="adresse" placeholder="Votre adresse*" required></textarea>
-                <span id="requisAdresse"></span>
-
-            </div> -->
+         
 
             <div class="col-sm-10 col-lg-10 mb-3">
 
