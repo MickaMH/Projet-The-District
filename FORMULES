@@ -1,0 +1,93 @@
+            <?php
+
+function get_categories() {
+
+    try {
+
+        $pdo = new PDO("mysql:host=localhost;dbname=the_district_base", "admin", "Afpa1234");
+
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $query = "SELECT * FROM categorie";
+
+        $stmt = $pdo->prepare($query);
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
+
+        // Gérer l'erreur (par exemple, journaliser ou afficher un message d'erreur)
+        echo "Erreur : " . $e->getMessage();
+        return [];
+    }
+}
+
+// Exemple d'utilisation :
+$categories = get_categories();
+
+foreach ($categories as $category) {
+
+   /*  echo $category['image'] . "<br>";
+    echo $category['libelle'] . "<br>"; */
+    $libelleMajuscules = strtoupper($category['libelle']);
+
+    echo " {$category['image']} {$libelleMajuscules} <br> ";
+}
+
+?>
+
+
+
+
+<?php
+// Connexion à la base de données
+$mysqli = new mysqli("localhost", "admin", "Afpa1234", "the_district_base");
+
+if ($mysqli->connect_error) {
+    die("La connexion a échoué : " . $mysqli->connect_error);
+}
+
+// Requête SQL pour récupérer les données
+$sql = "SELECT * FROM categorie"; // Remplacez "nom_de_la_table" par le nom de votre table et "condition" par votre condition
+
+$result = $mysqli->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        if ($row["active"] == 'Yes') { // Remplacez "colonne_image" par le nom de la colonne où 'Yes' est stocké
+            echo "<img src='/home/micka/Bureau/img" . $row["image"] . "' alt='Image'>"; // Remplacez "nom_fichier_image" par le nom de la colonne où les noms de fichiers d'image sont stockés
+        }
+    }
+} else {
+    echo "Aucun résultat trouvé.";
+}
+
+$mysqli->close();
+?>
+
+<?php
+// Fonction pour récupérer les catégories depuis la base de données
+function get_categories() {
+    try {
+        $pdo = new PDO("mysql:host=localhost;dbname=the_district_base", "admin", "Afpa1234");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT * FROM categorie";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        // Gérer l'erreur (par exemple, journaliser ou afficher un message d'erreur)
+        echo "Erreur : " . $e->getMessage();
+        return [];
+    }
+}
+
+// Exemple d'utilisation :
+$categories = get_categories();
+
+foreach ($categories as $category) {
+    $libelleMajuscules = strtoupper($category['libelle']);
+    echo " {$category['image']} {$libelleMajuscules} <br> ";
+}
+?>

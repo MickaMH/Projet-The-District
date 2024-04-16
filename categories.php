@@ -60,12 +60,53 @@
             </div>
 
             <!-- div remplissage categories -->
-            <div class="row">
+            <!-- <div class="row">
 
                 <div id="categories" class="d-flex flex-wrap justify-content-around"></div>
             
-            </div>
+            </div> -->
 
+
+     
+            <?php
+
+                function get_categories() {
+
+                    try {
+
+                    $pdo = new PDO("mysql:host=localhost;dbname=the_district_base", "admin", "Afpa1234");
+
+                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                    $query = "SELECT * FROM categorie";
+
+                    $stmt = $pdo->prepare($query);
+
+                    $stmt->execute();
+                    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    } catch (PDOException $e) {
+
+                    // Gérer l'erreur (par exemple, journaliser ou afficher un message d'erreur)
+                    echo "Erreur : " . $e->getMessage();
+                    return [];
+                    }
+                    }
+
+                // Exemple d'utilisation :
+                $categories = get_categories();
+
+                foreach ($categories as $category) {
+
+                /*  echo $category['image'] . "<br>";
+                    echo $category['libelle'] . "<br>"; */
+                
+                $libelleMajuscules = strtoupper($category['libelle']);
+
+                echo " {$category['image']} {$libelleMajuscules} <br> ";
+                }
+
+            ?>
 
 
         </main>
