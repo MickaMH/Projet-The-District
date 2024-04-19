@@ -51,7 +51,7 @@
             <!-- intitulé main -->
             <div class="row">
 
-                <div class="fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 text-center">
+                <div class="fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-5 text-center">
 
                     <p class="lettres">TOUS LES PLATS</p>
             
@@ -59,11 +59,23 @@
 
             </div>
 
+
             <!-- div remplissage plats -->
-            <div class="row">
+            <!-- <div class="row">
 
                 <div id="plats" class="d-flex flex-wrap justify-content-around"></div>
             
+            </div> -->
+
+
+            <div class="d-flex flex-wrap justify-content-around">
+
+                <?php
+            
+                    include('assets/php/remplir_plats.php');
+
+                ?>
+
             </div>
 
         </main>
