@@ -1,6 +1,6 @@
 <?php
 
-    include "header.php";
+    include "assets\php\header.php";
 
 ?>
 
@@ -72,6 +72,8 @@
                 <?php
             
                     include('assets/php/remplir_categories.php');
+                    // include('assets\php\PDO.php');
+                    // echo get_categories();
 
                 ?>
 
@@ -82,6 +84,6 @@
 
 <?php
 
-    include "footer.php";
+    include "assets/php/footer.php";
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-    include "header.php";
+    include "assets\php\header.php";
 
 ?>
 
@@ -92,7 +92,7 @@
 
 <?php
 
-    include "footer.php";
+    include "assets/php/footer.php";
 
 ?>
 

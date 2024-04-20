@@ -1,6 +1,6 @@
 <?php
 
-    include "header.php";
+    include "assets\php\header.php";
 
 ?>
 
@@ -73,6 +73,8 @@
                 <?php
             
                     include('assets/php/remplir_plats.php');
+                    // include('assets\php\PDO.php');
+                    // echo get_plats();
 
                 ?>
 
@@ -82,7 +84,7 @@
 
 <?php
 
-    include "footer.php";
+    include "assets/php/footer.php";
 
 ?>
 
