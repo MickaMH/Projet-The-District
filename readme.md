@@ -6,3 +6,12 @@ Page d' accueil Php :   http://localhost/phpmyadmin/ ;
 
 Utilisateur :   admin ;
 Mdp :   Afpa1234 ;
+
+--------------------------------------------------------------------
+
+Lancer page internet :  http://localhost/Projet-The-District/index.php ;
+
+Page d' accueil PhpMyAdmin :    http://localhost/phpmyadmin/ ;
+
+Utilisateur :   root ;
+Mdp :    ;
