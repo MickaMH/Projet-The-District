@@ -1,6 +1,6 @@
 <?php
 
-    include "assets\php\header.php";
+    include "assets/php/header.php";
 
 ?>
 

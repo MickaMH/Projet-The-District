@@ -54,9 +54,7 @@
 
    <script src="assets/js/remplissage_index.js"></script>
 
-   <script src="assets/js/remplissage_categories.js"></script>
-
-   <script src="assets/js/remplissage_plats.js"></script>
+   <script src="assets/js/fonction_accordeon.js"></script>
 
    <script src="assets/js/remplissage_plats_par_categorie.js"></script>
 

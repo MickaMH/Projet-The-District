@@ -1,6 +1,6 @@
 <?php
 
-    include "assets\php\header.php";
+    include "assets/php/header.php";
 
 ?>
 
@@ -51,7 +51,7 @@
             <!-- intitulé main -->
             <div class="row">
 
-                <div class="fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-5 text-center">
+                <div class="fs-1 fw-medium mb-lg-3 mt-lg-3 text-center">
 
                     <p class="lettres">LES CATEGORIES DE PLAT</p>
             
@@ -67,7 +67,7 @@
             
             </div> -->
 
-            <div class="row d-flex flex-wrap justify-content-around">
+            <div class="row">
 
                 <?php
             
