@@ -91,20 +91,37 @@
 
             </div>
 
+
+            <?php
+            
+                include('assets/php/remplir_commande.php');
+            
+            ?>
+            
+
+
             <!--Card Horizontale -->
             <div class="mt-3 mt-lg-5 mb-4 mb-lg-5 d-none d-lg-block">
 
-                <div class="card border-3 bordures rounded-5 flex-row mx-auto" style="width: 50rem; height: auto;">
+                <div class="card border-3 bordures rounded-5 flex-row mx-auto" style="width: 52rem; height: auto;">
 
-                    <div id="image_commande_horizontale"></div>
+                    
+                    <div>
 
-                    <div class="card-body p-3">
+                        <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class= "p-3 rounded-5">
 
-                            <div id="libelle_description_commande_horizontale" name="libelleCommande" required></div>
+                    </div>
+
+
+                    <div class="card-body ">
+
+                            <div class= "card-title fs-1 mb-lg-2 fw-medium"><?php echo $plat['libelle'];?></div>
+
+                            <div class= "card-text fst-italic fw-medium fs-5 mb-lg-3 me-lg-2"><?php echo $plat['description'];?></div>
 
                             <div class="d-flex">
 
-                                <label class="fs-5 fw-medium me-2">Prix :</label><div id="prix_commande_horizontale" name="prixCommande" required></div><p class="fs-5 fw-medium ms-2">euros</p>
+                                <label class= "card-text fw-medium fs-5">Prix :</label><div class= "card-text fw-medium fs-5 ms-lg-2"><?php echo $plat['prix'];?></div><p class="fs-5 fw-medium ms-2">&#8364;</p>
                             
                             </div>
 

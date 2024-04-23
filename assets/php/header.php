@@ -82,7 +82,8 @@
                             </div>
 
                         </div>
-
+                            
+          
                         <!-- barre de recherche -->
                         <div class="row justify-content-center mb-lg-5">
 
@@ -91,7 +92,7 @@
 
                                 <div class="d-flex p-1 ms-2">
 
-                                    <span class="input-group-text fs-4 sans_bordures bg-white" id="basic-addon1">&#x1F50E;</span>
+                                    <span class="input-group-text fs-4 sans_bordures bg-white">&#x1F50E;</span>
 
                                     <input type="text" class="ms-1 fs-4 fw-medium form-control sans_bordures" 
                                             placeholder="Rechercher un plat" aria-label="Rechercher" id="recherche_dynamique">

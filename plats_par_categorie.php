@@ -16,15 +16,19 @@
         </div>
 
         <!-- div remplissage plats par catégorie -->
-        <div class="row">
+        <div class="row d-flex justify-content-around">
 
             <!-- <div id="plats_par_categorie" class="d-flex flex-wrap justify-content-around"></div> -->
 
             <?php
             
+                include('assets/php/libelle_categories.php');
+            
+            ?>
+
+            <?php
+            
                 include('assets/php/remplir_plats_categories.php');
-                // include('assets\php\PDO.php');
-                // echo get_plats();
 
             ?>
 

@@ -1,21 +1,10 @@
 <?php
 
-// Connexion à la base de données (PDO)
+    require('assets/php/PDO.php');
 
-try {
+?>
 
-    $pdo = new PDO("mysql:host=localhost;dbname=the_district_base", "admin", "Afpa1234");
-
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-} catch (PDOException $e) {
-
-    // Gérer l'erreur (par exemple, journaliser ou afficher un message d'erreur)
-
-    echo "Erreur : " . $e->getMessage();
-
-}
-
+<?php
 
 // Récupérer l'ID de la catégorie depuis l'URL
 
@@ -56,11 +45,9 @@ if (isset($_GET['id'])) {
 
         foreach ($plats as $plat) {
 
-        
+            echo '<div class="col-lg-3 mb-5 mb-lg-5 mt-3 mt-lg-5">';
 
-            echo '<div class="col-lg-4 mb-3 mb-lg-5 mt-3 mt-lg-5">';
-
-            echo '<div class="card w-75 border-4 bordures rounded-5">';
+            echo '<div class="card w-auto border-4 bordures rounded-5">';
 
             echo '<img src="assets/img/plats/' . $plat['image'] . '" class="card-img-top p-3 rounded-5" alt="">';
 
@@ -72,7 +59,7 @@ if (isset($_GET['id'])) {
 
             echo '<div class="fw-medium fst-italic mb-3 ms-3 me-3" id="description-' . $plat['id'] . '" style="display: none;">' . $plat['description'] . '</div>';
 
-            echo '<a href="" class="card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches">' . "Commander" . '</a>';
+            echo '<a href="commande.php?id=' . $plat['id'] . '" class="card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches">' . "Commander" . '</a>';
 
             echo '</div>';
 
@@ -140,6 +127,6 @@ try {
     // Gérer l'erreur
     echo "Erreur : " . $e->getMessage();
 }
-
 }
+
 ?>

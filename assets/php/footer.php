@@ -42,7 +42,7 @@
    </footer>
 
 
-   <!-- liens javascript -->
+   <!-- liens javascript Bootstrap/Ajax-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
            crossorigin="anonymous"></script>
@@ -52,13 +52,7 @@
    <!-- mes fichiers javascript -->
    <script src="assets/js/barre_dynamique.js"></script>
 
-   <script src="assets/js/remplissage_index.js"></script>
-
    <script src="assets/js/fonction_accordeon.js"></script>
-
-   <script src="assets/js/remplissage_plats_par_categorie.js"></script>
-
-   <script src="assets/js/remplissage_commande.js"></script>
 
     <script src="assets/js/validation_commande.js"></script>
 

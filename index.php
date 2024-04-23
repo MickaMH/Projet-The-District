@@ -111,7 +111,7 @@
 
                     <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
-                        <a href="categories.html" class="text-decoration-none">
+                        <a href="categories.php" class="text-decoration-none">
 
                         <p class="fw-medium lettres_blanches">CATEGORIES</p>
 
@@ -133,7 +133,7 @@
 
                     <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
-                        <a href="plats.html" class="text-decoration-none">
+                        <a href="plats.php" class="text-decoration-none">
 
                         <p class="fw-medium lettres_blanches">PLATS</p>
 
@@ -155,7 +155,7 @@
 
                     <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
-                        <a href="contact.html" class="text-decoration-none">
+                        <a href="contact.php" class="text-decoration-none">
 
                         <p class="fw-medium lettres_blanches">CONTACT</p>
 
