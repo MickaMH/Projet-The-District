@@ -61,20 +61,32 @@
 
         <div class="row">
 
+            <?php
+            
+                include('assets/php/remplir_commande.php');
+        
+            ?>
+
             <!--Card Verticale -->
             <div class="mt-3 mb-4 d-block d-sm-none">
 
                 <div class="card border-3 bordures rounded-5" style="height: auto;">
 
-                    <div id="image_commande_verticale"></div>
+                    <div>
 
-                    <div class="card-body p-3">
+                        <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class= "card-img-top p-3 rounded-5">
 
-                        <div id="libelle_description_commande_verticale" ></div>
+                    </div>
+
+                    <div class="card-body p-3 pt-0">
+
+                        <div class= "card-title fs-1 mb-2 fw-medium"><?php echo $plat['libelle'];?></div>
+
+                        <div class= "card-text fst-italic fw-medium fs-5 mb-3 me-2"><?php echo $plat['description'];?></div>
 
                         <div class="d-flex">
 
-                            <label class="fs-5 fw-medium me-2">Prix :</label><div id="prix_commande_verticale" ></div><p class="fs-5 fw-medium ms-2">euros</p>
+                        <label class= "card-text fw-medium fs-5">Prix :</label><div class= "card-text fw-medium fs-5 ms-2"><?php echo $plat['prix'];?></div><p class="fs-5 fw-medium ms-2">&#8364;</p>
                         
                         </div>
 
@@ -92,11 +104,7 @@
             </div>
 
 
-            <?php
-            
-                include('assets/php/remplir_commande.php');
-            
-            ?>
+           
             
 
 
@@ -105,13 +113,11 @@
 
                 <div class="card border-3 bordures rounded-5 flex-row mx-auto" style="width: 52rem; height: auto;">
 
-                    
                     <div>
 
                         <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class= "p-3 rounded-5">
 
                     </div>
-
 
                     <div class="card-body ">
 

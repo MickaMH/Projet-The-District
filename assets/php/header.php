@@ -135,11 +135,11 @@
 
             </div>
     
-            <div class="col-4 display-inline-block d-none d-lg-block position-relative z-2">
+            <div class="col-4 display-inline-block d-none d-lg-block bordure_haut">
 
                 <video autoplay loop muted class="img-fluid">
 
-                    <source src="assets/videos/district_rangement.mp4" type="video/mp4">
+                    <source src="assets/img/videos/video_the_district.mp4" type="video/mp4">
                     <p>Votre navigateur ne prend pas en charge la vidéo.</p>
 
                 </video>                

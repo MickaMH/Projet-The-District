@@ -11,7 +11,7 @@
         <div class="row">
 
             <!-- carousel desktop -->
-            <div class="fw-medium text-center position-relative z-1 d-none d-lg-block">
+            <div class="fw-medium text-center d-none d-lg-block">
 
                 <div id="carousel_desktop" class="carousel-fade" data-bs-ride="carousel">
 
@@ -52,7 +52,7 @@
             </div>
 
             <!-- carousel mobile -->
-            <div class="fw-medium d-flex justify-content-center position-relative z-1 d-block d-sm-none">
+            <div class="fw-medium d-flex justify-content-center d-block d-sm-none">
 
                 <div id="carousel_mobile" class="carousel-fade" data-bs-ride="carousel">
 
@@ -99,45 +99,49 @@
 
             <div class="card-group text-center">
 
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4" style="width: 10rem; height: 10rem;">
+                <div class="d-flex">
 
-                    <div>
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4" style="width: 10rem; height: 10rem;">
 
-                        <p class="card-text mb-1 fw-medium">Toutes les<br> catégories de plat</p>
+                        <div>
 
-                        <img src="assets/img/icones/icone_categories_transp_2.png" class="card-img mt-1" style="width: 33%;" alt="" title="">
+                            <p class="card-text mb-1 fw-medium">Toutes les<br> catégories de plat</p>
+
+                            <img src="assets/img/icones/icone_categories_transp_2.png" class="card-img mt-1" style="width: 33%;" alt="" title="">
             
-                    </div>
+                        </div>
 
-                    <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
-                        <a href="categories.php" class="text-decoration-none">
+                            <a href="categories.php" class="text-decoration-none">
 
-                        <p class="fw-medium lettres_blanches">CATEGORIES</p>
+                            <p class="fw-medium lettres_blanches">CATEGORIES</p>
 
-                        </a>
+                            </a>
+
+                        </div>
 
                     </div>
 
-                </div>
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4" style="width: 10rem; height: 10rem;">
 
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4" style="width: 10rem; height: 10rem;">
+                        <div>
 
-                    <div>
+                            <p class="card-text mb-1 fw-medium">Retrouvez tous<br> les plats</p>
 
-                        <p class="card-text mb-1 fw-medium">Retrouvez tous<br> les plats</p>
-
-                        <img src="assets/img/icones/icone_plats_transp_2.png" class="card-img mt-1" style="width: 37%;" alt="" title="">
+                            <img src="assets/img/icones/icone_plats_transp_2.png" class="card-img mt-1" style="width: 37%;" alt="" title="">
             
-                    </div>
+                        </div>
 
-                    <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
-                        <a href="plats.php" class="text-decoration-none">
+                            <a href="plats.php" class="text-decoration-none">
 
-                        <p class="fw-medium lettres_blanches">PLATS</p>
+                            <p class="fw-medium lettres_blanches">PLATS</p>
 
-                        </a>
+                            </a>
+
+                        </div>
 
                     </div>
 

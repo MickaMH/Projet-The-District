@@ -20,13 +20,17 @@ if (isset($_GET['id'])) {
     // Récupérez le résultat
     $resultat = $requete->fetch(PDO::FETCH_ASSOC);
 
-    if ($resultat) {
-        $libelleCategorie = $resultat['libelle'];
-        echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>$libelleCategorie</div>";
-    } else {
-        echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>FIN DES CATEGORIES</div>";
-    }
-} else {
+        if ($resultat) {
+            $libelleCategorie = $resultat['libelle'];
+            echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>$libelleCategorie</div>";
+
+        } else {
+            echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>FIN DES CATEGORIES</div>";
+        }
+}   
+
+else {
     echo "<div>Aucun ID de catégorie spécifié dans l'URL.</div>";
 }
+
 ?>

@@ -54,6 +54,11 @@ parallax_mobile{
     border-color: #980848;
 }
 
+.bordure_haut{
+    border-top: 0.4rem solid;
+    border-color: #980848;
+}
+
 .rond{
     border-radius: 5rem 5rem;
     border: 0.2rem solid black;
