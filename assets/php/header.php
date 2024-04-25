@@ -139,7 +139,7 @@
 
                 <video autoplay loop muted class="img-fluid">
 
-                    <source src="assets/img/videos/video_the_district.mp4" type="video/mp4">
+                    <source src="assets/img/videos/video_the_district_projet.mp4" type="video/mp4">
                     <p>Votre navigateur ne prend pas en charge la vidéo.</p>
 
                 </video>                
@@ -181,4 +181,3 @@
         </div>
     
     </nav>
-

@@ -20,28 +20,28 @@
                         <div class="carousel-item active" data-bs-interval="4000">
 
                             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_desktop">BIENVENUE</p>
+                            <p class="d-block w-100 bienvenue_desktop fst-italic">BIENVENUE</p>
 
                         </div>
 
                         <div class="carousel-item" data-bs-interval="4000">
 
                             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_desktop">WELCOME</p>
+                            <p class="d-block w-100 bienvenue_desktop fst-italic">WELCOME</p>
 
                         </div>
 
                         <div class="carousel-item" data-bs-interval="4000">
 
                             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_desktop">BIENVENIDA</p>
+                            <p class="d-block w-100 bienvenue_desktop fst-italic">BIENVENIDA</p>
 
                         </div>
 
                         <div class="carousel-item" data-bs-interval="4000">
 
                             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_desktop">WILLKOMMEN</p>
+                            <p class="d-block w-100 bienvenue_desktop fst-italic">WILLKOMMEN</p>
 
                         </div>
 
@@ -51,46 +51,11 @@
             
             </div>
 
-            <!-- carousel mobile -->
-            <div class="fw-medium d-flex justify-content-center d-block d-sm-none">
+            <?php
 
-                <div id="carousel_mobile" class="carousel-fade" data-bs-ride="carousel">
+            include "assets/php/carousel_mobile.php";
 
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active" data-bs-interval="4000">
-
-                            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">BIENVENUE</p>
-
-                        </div>
-
-                        <div class="carousel-item" data-bs-interval="4000">
-
-                            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">WELCOME</p>
-
-                        </div>
-
-                        <div class="carousel-item" data-bs-interval="4000">
-
-                            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">BIENVENIDA</p>
-
-                        </div>
-
-                        <div class="carousel-item" data-bs-interval="4000">
-
-                            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                            <p class="d-block w-100 bienvenue_mobile ps-3 pe-3">WILLKOMMEN</p>
-
-                        </div>
-
-                    </div>
-                    
-                </div>
-            
-            </div>
+            ?>
 
         </div>
 

@@ -11,8 +11,13 @@
         <div class="row">
 
             <!-- <div id="libelle_categorie"></div> -->
-          
 
+            <?php
+
+                include "assets/php/carousel_mobile.php";
+
+            ?>
+          
         </div>
 
         <!-- div remplissage plats par catégorie -->
