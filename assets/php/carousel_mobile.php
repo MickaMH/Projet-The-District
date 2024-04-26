@@ -54,7 +54,7 @@
 
                             <!-- <img src="assets/img/district/ecriture_district_blanc.png" style="width: auto;height: 6.375rem;" 
                                     class="d-block bienvenue_mobile ps-3 pe-3" alt="The District"> -->
-                            <p class="d-block bienvenue_mobile fst-italic" style="width: 25rem;height: auto;">The District</p>
+                            <p class="d-block bienvenue_mobile" style="width: 25rem;height: auto;">The District</p>
 
                         </div>
 

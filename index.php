@@ -265,11 +265,17 @@
 
             <div class="col-lg-12 mt-2 d-flex justify-content-around">
 
-                <img src="assets/img/labels/label_resto.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
+                <a href="https://www.maitresrestaurateurs.fr/" class="text-decoration-none">
+                    <img src="assets/img/labels/label_resto.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
+                </a>
 
-                <img src="assets/img/labels/artisanat_certifie.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
-                
-                <img src="assets/img/labels/producteurs_locaux.jpeg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
+                <a href="https://www.artisanat.fr/metiers/labels-qualifications/titre-maitre-artisan" class="text-decoration-none">
+                    <img src="assets/img/labels/artisanat_certifie.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
+                </a>
+
+                <a href="https://www.bienvenue-a-la-ferme.com/" class="text-decoration-none">
+                    <img src="assets/img/labels/producteurs_locaux.jpeg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
+                </a>
 
             </div>
 
