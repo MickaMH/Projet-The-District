@@ -1,6 +1,6 @@
 <?php
 
-    include "assets/php/header.php";
+    include "assets/php/fichiers_php/header.php";
 
 ?>
 
@@ -14,7 +14,7 @@
 
             <?php
 
-                include "assets/php/carousel_mobile.php";
+                include "assets/php/fichiers_php/carousel_mobile.php";
 
             ?>
           
@@ -23,17 +23,17 @@
         <!-- div remplissage plats par catégorie -->
         <div class="row d-flex justify-content-around">
 
-            <!-- <div id="plats_par_categorie" class="d-flex flex-wrap justify-content-around"></div> -->
-
             <?php
             
-                include('assets/php/libelle_categories.php');
+                include 'assets\php\dao.php';
+            
+                $libelle_categorie = get_libelle();
             
             ?>
 
             <?php
             
-                include('assets/php/remplir_plats_categories.php');
+                include('assets\php\fichiers_php\remplir_plats_categories.php');
 
             ?>
 
@@ -69,7 +69,7 @@
 
 <?php
 
-    include "assets/php/footer.php";
+    include "assets/php/fichiers_php/footer.php";
 
 ?>
 

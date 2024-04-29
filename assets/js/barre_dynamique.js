@@ -8,7 +8,7 @@
 
   // Fetch data from the PHP script
 
-  fetch('assets/php/barre_dynamique.php')
+  fetch('assets/php/fichiers_php/barre_dynamique.php')
 
     .then(response => response.json())
 

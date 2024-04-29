@@ -1,6 +1,6 @@
 <?php
 
-    include "assets/php/header.php";
+    include "assets/php/fichiers_php/header.php";
 
 ?>
 
@@ -53,7 +53,7 @@
 
             <?php
 
-            include "assets/php/carousel_mobile.php";
+            include "assets/php/fichiers_php/carousel_mobile.php";
 
             ?>
 
@@ -285,6 +285,6 @@
 
 <?php
 
-    include "assets/php/footer.php";
+    include "assets/php/fichiers_php/footer.php";
 
 ?>

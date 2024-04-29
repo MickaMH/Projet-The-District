@@ -6,8 +6,8 @@ if (isset($_GET['id'])) {
 
     // Connectez-vous à votre base de données (vous devrez adapter ces informations à votre configuration)
     $serveur = "localhost";
-    $utilisateur = "admin";
-    $motDePasse = "Afpa1234";
+    $utilisateur = "root";
+    $motDePasse = "";
     $baseDeDonnees = "the_district_base";
 
     $connexion = new PDO("mysql:host=$serveur;dbname=$baseDeDonnees", $utilisateur, $motDePasse);

@@ -1,6 +1,6 @@
 <?php
 
-    include "assets/php/header.php";
+    include "assets/php/fichiers_php/header.php";
 
 ?>
 
@@ -9,7 +9,7 @@
 
         <?php
 
-            include "assets/php/carousel_mobile.php";
+            include "assets/php/fichiers_php/carousel_mobile.php";
 
         ?>
 
@@ -28,50 +28,11 @@
 
             <?php
             
-                include('assets/php/remplir_commande.php');
-        
-            ?>
-
-            <!--Card Verticale -->
-            <div class="mt-3 mb-4 d-block d-sm-none">
-
-                <div class="card border-3 bordures rounded-5" style="height: auto;">
-
-                    <div>
-
-                        <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class= "card-img-top p-3 rounded-5">
-
-                    </div>
-
-                    <div class="card-body p-3 pt-0">
-
-                        <div class= "card-title fs-1 mb-2 fw-medium"><?php echo $plat['libelle'];?></div>
-
-                        <div class= "card-text fst-italic fw-medium fs-5 mb-3 me-2"><?php echo $plat['description'];?></div>
-
-                        <div class="d-flex">
-
-                        <label class= "card-text fw-medium fs-5">Prix :</label><div class= "card-text fw-medium fs-5 ms-2"><?php echo $plat['prix'];?></div><p class="fs-5 fw-medium ms-2">&#8364;</p>
-                        
-                        </div>
-
-                        <div>
-
-                            <label class="fs-5 fw-medium">Quantité :</label>
-                            <input type="text" name="quantite" class="fs-5 fw-medium ms-2 text-center rounded-3 border-3 bordures" value="1" style="width: 4rem; height: 2.5rem;" readonly>
-                        
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-           
+                include 'assets\php\dao.php';
             
+                $plat = get_commande();
 
+            ?>
 
             <!--Card Horizontale -->
             <div class="mt-3 mt-lg-5 mb-4 mb-lg-5 d-none d-lg-block">
@@ -109,59 +70,47 @@
 
             </div>
 
+            <!--Card Verticale -->
+            <div class="mt-3 mb-4 d-block d-sm-none">
+
+                <div class="card border-3 bordures rounded-5" style="height: auto;">
+
+                    <div>
+
+                        <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class= "card-img-top p-3 rounded-5">
+
+                    </div>
+
+                    <div class="card-body p-3 pt-0">
+
+                        <div class= "card-title fs-1 mb-2 fw-medium"><?php echo $plat['libelle'];?></div>
+
+                        <div class= "card-text fst-italic fw-medium fs-5 mb-3 me-2"><?php echo $plat['description'];?></div>
+
+                        <div class="d-flex">
+
+                        <label class= "card-text fw-medium fs-5">Prix :</label><div class= "card-text fw-medium fs-5 ms-2"><?php echo $plat['prix'];?></div><p class="fs-5 fw-medium ms-2">&#8364;</p>
+                        
+                        </div>
+
+                        <div>
+
+                            <label class="fs-5 fw-medium">Quantité :</label>
+                            <input type="text" name="quantite" class="fs-5 fw-medium ms-2 text-center rounded-3 border-3 bordures" value="1" style="width: 4rem; height: 2.5rem;" readonly>
+                        
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
         <div class="row d-flex justify-content-center">
 
-        <?php
-
-// Set the path to the PHPMailer library
-$path = '/home/micka/Bureau/Projet-The-District/PHPMailer/src';
-
-// Require the PHPMailer library
-require $path . '/PHPMailer.php';
-require $path . '/Exception.php';
-require $path . '/SMTP.php';
-
-// Create a new PHPMailer instance
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-
-// Set the SMTP settings
-$mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;
-$mail->Username = ('MickaAfpa47@gmail.com'); // utiliser une variable d'environnement
-$mail->Password = ('Enigma@Echange#09'); // utiliser une variable d'environnement
-$mail->SMTPSecure = 'ssl'; // utiliser SSL/TLS
-$mail->Port = 465; // Port for SSL
-
-// Set the email sender and recipient
-$mail->setFrom('MickaAfpa47@gmail.com', 'The District');
-$mail->addAddress('MickaAfpa47@gmail.com', 'Mr.Moi');
-
-// Set the email subject and body
-$mail->Subject = 'Confirmation de votre commande';
-$mail->Body = 'Nous vous confirmons votre commande.';
-$mail->CharSet = 'UTF-8'; // définir le charset UTF-8
-
-// Send the email
-try {
-    if ($mail->send()) {
-        echo 'E-mail sent successfully!';
-    } else {
-        echo 'Error: '. $mail->ErrorInfo;
-    }
-} catch (Exception $e) {
-    echo 'Error: '. $e->getMessage();
-}
-
-// Close the SMTP connection
-$mail->SmtpClose();
-
-// Unset the PHPMailer instance
-unset($mail);
-
-?>
+     
 
             <!-- formulaire de commande -->
             <form action="traitement_commande.php" method="POST" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
@@ -226,6 +175,6 @@ unset($mail);
 
 <?php
 
-    include "assets/php/footer.php";
+    include "assets/php/fichiers_php/footer.php";
 
 ?>

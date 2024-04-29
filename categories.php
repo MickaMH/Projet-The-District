@@ -1,6 +1,6 @@
 <?php
 
-    include "assets/php/header.php";
+    include "assets/php/fichiers_php/header.php";
 
 ?>
 
@@ -9,7 +9,7 @@
 
             <?php
 
-                include "assets/php/carousel_mobile.php";
+                include "assets/php/fichiers_php/carousel_mobile.php";
 
             ?>
 
@@ -24,21 +24,26 @@
 
             </div>
 
-
-            <!-- div remplissage categories -->
-            <!-- <div class="row">
-
-                <div id="categories" class="d-flex flex-wrap justify-content-around"></div>
-            
-            </div> -->
-
             <div class="row">
 
-                <?php
-            
-                    include('assets/php/remplir_categories.php');
-                    // include('assets\php\PDO.php');
-                    // echo get_categories();
+                 <?php
+                    
+                    require 'assets\php\dao.php';
+
+                    $categories = get_categories();
+
+                    foreach ($categories as $category) {
+                        
+                    $libelle = $category['libelle'];
+                    $libelleMaj = strtoupper($libelle);
+
+                    echo '<div class="col-lg-4 mb-5 mb-lg-5 mt-3 mt-lg-5 d-flex justify-content-around">';
+                        echo '<div class="card w-auto border-4 bordures rounded-5">';
+                            echo '<img src="assets/img/categories/' . $category['image'] . '" class="card-img-top p-3 rounded-5" alt="">';
+                            echo '<a href="plats_par_categorie.php?id=' . $category['id'] . '" class="card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none text-uppercase fond_logo lettres_blanches">' . $libelleMaj . '</a>';
+                        echo '</div>';
+                    echo '</div>';
+                    }
 
                 ?>
 
@@ -49,6 +54,6 @@
 
 <?php
 
-    include "assets/php/footer.php";
+    include "assets/php/fichiers_php/footer.php";
 
 ?>

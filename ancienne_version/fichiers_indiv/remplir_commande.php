@@ -19,12 +19,12 @@ if (isset($_GET['id'])) {
 
     if ($plat) {
         // Affichage des détails du plat
-         '<div>';
-         '<img src="assets/img/plats' . $plat['image'] . '" alt="' . $plat['libelle'] . '">';
-         '<h3>' . $plat['libelle'] . '</h3>';
-         '<p>' . $plat['description'] . '</p>';
-         '<p>Prix : ' . $plat['prix'] . ' €</p>';
-         '</div>';
+        //  '<div>';
+        //  '<img src="assets/img/plats' . $plat['image'] . '" alt="' . $plat['libelle'] . '">';
+        //  '<h3>' . $plat['libelle'] . '</h3>';
+        //  '<p>' . $plat['description'] . '</p>';
+        //  '<p>Prix : ' . $plat['prix'] . ' €</p>';
+        //  '</div>';
     } else {
         echo 'Plat non trouvé.';
     }
