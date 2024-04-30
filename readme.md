@@ -6,6 +6,8 @@ Lancer page internet :  http://localhost:8000 ;
 
 Page d' accueil Php :   http://localhost/phpmyadmin/ ;
 
+MailHog : http://localhost:8025 ;
+
 Utilisateur :   admin ;
 Mdp :   Afpa1234 ;
 
