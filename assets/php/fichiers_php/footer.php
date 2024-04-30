@@ -56,6 +56,8 @@
 
     <script src="assets/js/validation_commande.js"></script>
 
+    <script src="assets/js/envoi_mail.js"></script>
+
    <script src="assets/js/validation_contact.js"></script>
 
    

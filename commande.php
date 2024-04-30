@@ -28,7 +28,7 @@
 
             <?php
             
-                include 'assets\php\dao.php';
+                include 'assets/php/dao.php';
             
                 $plat = get_commande();
 
@@ -110,8 +110,6 @@
 
         <div class="row d-flex justify-content-center">
 
-     
-
             <!-- formulaire de commande -->
             <form action="traitement_commande.php" method="POST" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
@@ -164,8 +162,6 @@
                             style="width: 10rem; height: 3rem;" type="submit" value="Commander">
 
                 </div>
-
-               
 
             </form>
 

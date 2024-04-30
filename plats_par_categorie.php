@@ -25,7 +25,7 @@
 
             <?php
             
-                include 'assets\php\dao.php';
+                include 'assets/php/dao.php';
             
                 $libelle_categorie = get_libelle();
             
@@ -33,7 +33,7 @@
 
             <?php
             
-                include('assets\php\fichiers_php\remplir_plats_categories.php');
+                include('assets/php/fichiers_php/remplir_plats_categories.php');
 
             ?>
 

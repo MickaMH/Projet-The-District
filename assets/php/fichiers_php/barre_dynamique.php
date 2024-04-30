@@ -2,8 +2,8 @@
 
 // Database connection
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin";
+$password = "Afpa1234";
 $dbname = "the_district_base";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

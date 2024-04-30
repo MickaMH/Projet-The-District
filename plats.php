@@ -28,7 +28,7 @@
 
                 <?php
                 
-                    require 'assets\php\dao.php';
+                    require 'assets/php/dao.php';
 
                     $plats = get_plats();
 
