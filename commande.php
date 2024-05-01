@@ -83,13 +83,13 @@
 
                     <div class="card-body p-3 pt-0">
 
-                        <div class= "card-title fs-1 mb-2 fw-medium"><?php echo $plat['libelle'];?></div>
+                        <div class= "card-title fs-1 mb-2 fw-medium" name="libelleCommande"><?php echo $plat['libelle'];?></div>
 
                         <div class= "card-text fst-italic fw-medium fs-5 mb-3 me-2"><?php echo $plat['description'];?></div>
 
                         <div class="d-flex">
 
-                        <label class= "card-text fw-medium fs-5">Prix :</label><div class= "card-text fw-medium fs-5 ms-2"><?php echo $plat['prix'];?></div><p class="fs-5 fw-medium ms-2">&#8364;</p>
+                        <label class= "card-text fw-medium fs-5">Prix :</label><div class= "card-text fw-medium fs-5 ms-2" name="prixCommande"><?php echo $plat['prix'];?></div><p class="fs-5 fw-medium ms-2">&#8364;</p>
                         
                         </div>
 
@@ -111,7 +111,7 @@
         <div class="row d-flex justify-content-center">
 
             <!-- formulaire de commande -->
-            <form action="traitement_commande.php" method="POST" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
+            <form action="assets\php\fichiers_php\enreg_1.php" method="POST" name="formulaire" id="document" class="row m-sm-1 m-lg-5 d-flex justify-content-center">
             
                 <div class="col-sm-10 col-lg-5 mb-5 mt-3 mt-lg-0">
 
