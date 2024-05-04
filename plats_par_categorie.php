@@ -60,7 +60,7 @@
 
                 <a class="d-flex justify-content-center align-items-center fw-medium mx-auto shadow-lg fs-5 bouton_suivant" 
                     id="suivant" style="width: 10rem; height: 3rem;"  href="plats_par_categorie.php?id=<?php echo $categorie_id + 1; ?>" role="button">Suivant</a>
-    
+            
             </div>
 
         </div>

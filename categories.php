@@ -16,7 +16,7 @@
             <!-- intitulé main -->
             <div class="row">
 
-                <div class="fs-1 fw-medium mb-3 mb-lg-3 mt-lg-3 text-center">
+                <div class="fs-1 fw-medium mb-lg-3 mt-lg-3 text-center">
 
                     <p class="lettres">LES CATEGORIES DE PLAT</p>
             
